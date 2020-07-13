@@ -1,9 +1,3 @@
-# PROJECT 4 README <!-- omit in toc -->
-
-> The Project Planning section **should be completed** for your project pitch with instructors.
->
-> To ensure correct Markdown, copy and paste the raw template code into your project repo README file. Remove ALL template instructions and replace with your project details.
-
 - [Overview](#overview)
 - [MVP](#mvp)
   - [Goals](#goals)
@@ -24,40 +18,37 @@
 
 ## Overview
 
-_**Project Title** is lorem ipsum dolor sit amet. Phasellus dapibus fermentum risus vitae bibendum. Integer vel ipsum mollis odio sollicitudin ornare eu vel ex. In quis fringilla velit, ac maximus quam. Etiam eget placerat neque. Aenean faucibus sem non nisi lobortis ullamcorper._
+_**Wat'd Ya Eat?** is an online food journal. In this day and age where just about everything has loads of sugar and carbs, it's hard to eat healthy, but recording your food intake is a step in the right direction. I expect the most trouble with the login authentication system and the create and edit logic on the backend. I also expect some road blocks when transfering information back up from the react components, into the database or vice versa. These are problems that were encountered during project 3.
 
 
 <br>
 
 ## MVP
-
-> The Minimum Viable Product should be a well-planned, easily-communicated product, ensuring that the client's deliverable will be achievable and meet specifications within the time frame estimated.
-
-_The **Project Title** MVP lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus fermentum risus vitae bibendum. Integer vel ipsum mollis odio sollicitudin ornare eu vel ex. In quis fringilla velit, ac maximus quam. Etiam eget placerat neque. Aenean faucibus sem non nisi lobortis ullamcorper._
+_The **Wat'd Ya Eat?** MVP is a full stack CRUD application. The user can create an account and log in each day to record your daily meals, edit or delete incorrect logs. The user can look back on previous weeks to see how their diets have changed over time.
 
 <br>
 
 ### Goals
 
-- _Lorem ipsum, dolor sit amet,_
-- _consectetur adipiscing elit._
-- _Phasellus dapibus fermentum risus vitae bibendum._
-- _Integer vel ipsum mollis odio sollicitudin ornare eu vel ex._
-- _etc._
+- _Monday: Create and seed sample data, create routes, models and controllers, make sure data renders on page.
+- _Tuesday: Create login page and authentication token system. Make sure user can create account and update database.
+- _Wednesday: Create frontend react app. Make sure data can pass between front and back end of application.
+- _Thursday: Make sure user can create an account, login. And make sure basic CRUD works.
+- _Friday: Styling day, including media queries.
 
 <br>
 
 ### Libraries and Dependencies
 
-> Use this section to list all supporting libraries and dependencies, and their role in the project. Below is an example - this needs to be replaced!
-
 |     Library      | Description                                |
 | :--------------: | :----------------------------------------- |
-|      React       | _Lorem ipsum dolor sit amet, consectetur._ |
-|   React Router   | _Lorem ipsum dolor sit amet, consectetur._ |
-| React SemanticUI | _Lorem ipsum dolor sit amet, consectetur._ |
-|     Express      | _Lorem ipsum dolor sit amet, consectetur._ |
-|  Express Router  | _Lorem ipsum dolor sit amet, consectetur._ |
+|      React       | _Foundation for frontend components._ |
+|   React Router   | _For our react routes._ |
+|     Bootsnap     | _Reduces boot times through caching._ |
+|     Express      | _For handling our api data._ |
+|    rack-cors     | _For handling Cross-Origin Resource Sharing._|
+|      eyebug      | _debugger console._|
+|      rails       | _Speeds up development._|
 
 <br>
 
@@ -65,7 +56,6 @@ _The **Project Title** MVP lorem ipsum dolor sit amet, consectetur adipiscing el
 
 #### Wireframes
 
-> Use the Wireframes section to display desktop, tablet and mobile views. No hand-drawn wireframes. Use a tool like wireframe.cc, Whimsical or AdobeXD
 
 ![Dummy Link](url)
 
@@ -93,11 +83,7 @@ _The **Project Title** MVP lorem ipsum dolor sit amet, consectetur adipiscing el
 
 #### Component Tree
 
-> Use this section to display the structure of how your React components are being rendered. This should show the parent to child relation between you components. In other words, show which components are rendering the other components. 
-
 #### Component Hierarchy
-
-> Use this section to define your React components and the data architecture of your app. This should be a reflection of how you expect your directory/file tree to look like. 
 
 ``` structure
 
@@ -109,6 +95,13 @@ src
       |__ mockups
 |__ components/
       |__ Header.jsx
+      |__ Nav.jsx
+      |__ Footer.jsx
+      |__ Main.jsx
+      |__ LoginBtn.jsx
+      |__ LogoutBtn.jsx
+      |__ Display.jsx
+      |__ Record.jsx
 |__ services/
 
 ```
@@ -124,6 +117,9 @@ src
 |   Gallery    |   class    |   y   |   n   | _The gallery will render the posts using cards in flexbox._      |
 | Gallery Card | functional |   n   |   y   | _The cards will render the post info via props._                 |
 |    Footer    | functional |   n   |   n   | _The footer will show info about me and a link to my portfolio._ |
+|    Footer    | functional |   n   |   n   | _The footer will show info about me and a link to my portfolio._ |
+|    Footer    | functional |   n   |   n   | _The footer will show info about me and a link to my portfolio._ |
+|    Footer    | functional |   n   |   n   | _The footer will show info about me and a link to my portfolio._ |
 
 #### Time Estimates
 
@@ -135,7 +131,6 @@ src
 | Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
 | TOTAL               |          |     6 hrs      |     3 hrs     |     TBD     |
 
-> _Why is this necessary? Time frames are key to the development cycle. You have limited time to code your app, and your estimates can then be used to evaluate possibilities of your MVP and post-MVP based on time needed. It's best you assume an additional hour for each component, as well as a few hours added to the total time, to play it safe._
 
 <br>
 
@@ -143,7 +138,7 @@ src
 
 #### ERD Model
 
-> Use this section to display an image of a computer generated ERD model. You can use draw.io, Lucidchart or another ERD tool.
+> https://app.lucidchart.com/invitations/accept/97a4248b-7686-4d40-b120-8156394f0b29
 
 <br>
 
@@ -151,14 +146,14 @@ src
 
 ## Post-MVP
 
-> Use this section to document ideas you've had that would be fun (or necessary) for your Post-MVP. This will be helpful when you return to your project after graduation!
+> Add background animations (like someone running, fitting the healthy app theme)
+> Add an option where the api data is turned into graph charts to see how a users diet has changed or remained the same over time.
+> Add a what can I do better button where the user can click it and they recieve tips for better dieting (don't eat past 7pm, try drinking less soda, etc.)
+> Add a meal planner where the user can create their own diet plan.
 
 ***
 
 ## Code Showcase
 
-> Use this section to include a brief code snippet of functionality that you are proud of and a brief description.
-
 ## Code Issues & Resolutions
 
-> Use this section to list of all major issues encountered and their resolution.
