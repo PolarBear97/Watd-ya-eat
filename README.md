@@ -59,17 +59,10 @@ _The **Wat'd Ya Eat?** MVP is a full stack CRUD application. The user can create
 
 ![Desktop](https://app.lucidchart.com/invitations/accept/a0738172-d140-4ec1-85a7-49763dd62387)
 
-![Dummy Link](url)
+![Tablet](https://app.lucidchart.com/invitations/accept/a0738172-d140-4ec1-85a7-49763dd62387)
 
-- Resource Show
+![Mobile](https://app.lucidchart.com/invitations/accept/a0738172-d140-4ec1-85a7-49763dd62387)
 
-![Dummy Link](url)
-
-- Tablet Resource Index
-
-![Dummy Link](url)
-
-- Mobile Resource Index
 
 #### Component Tree
 
