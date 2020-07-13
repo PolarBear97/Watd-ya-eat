@@ -18,13 +18,13 @@
 
 ## Overview
 
-_**Wat'd Ya Eat?** is an online food journal. In this day and age where just about everything has loads of sugar and carbs, it's hard to eat healthy, but recording your food intake is a step in the right direction. I expect the most trouble with the login authentication system and the create and edit logic on the backend. I also expect some road blocks when transfering information back up from the react components, into the database or vice versa. These are problems that were encountered during project 3.
+_**Wat'd Ya Eat?** is an online food journal. In this day and age where just about everything has loads of sugar and carbs, it's hard to eat healthy, but recording your food intake is a step in the right direction. 
 
 
 <br>
 
 ## MVP
-_The **Wat'd Ya Eat?** MVP is a full stack CRUD application. The user can create an account and log in each day to record your daily meals, edit or delete incorrect logs. The user can look back on previous weeks to see how their diets have changed over time.
+_The **Wat'd Ya Eat?** MVP is a full stack CRUD application. The user can create an account and log in each day to record your daily meals, edit or delete incorrect logs. The user can look back on previous weeks to see how their diets have changed over time. I expect the most trouble with the login authentication system and the create and edit logic on the backend. I also expect some road blocks when transfering information back up from the react components, into the database or vice versa. These are problems that were encountered during project 3.
 
 <br>
 
@@ -57,17 +57,7 @@ _The **Wat'd Ya Eat?** MVP is a full stack CRUD application. The user can create
 #### Wireframes
 
 
-![Dummy Link](url)
-
-- Desktop Landing
-
-![Dummy Link](url)
-
-- Desktop Hero
-
-![Dummy Link](url)
-
-- Resource Index
+![Desktop](https://app.lucidchart.com/invitations/accept/a0738172-d140-4ec1-85a7-49763dd62387)
 
 ![Dummy Link](url)
 
@@ -84,8 +74,6 @@ _The **Wat'd Ya Eat?** MVP is a full stack CRUD application. The user can create
 #### Component Tree
 
 #### Component Hierarchy
-
-``` structure
 
 src
 |__ assets/
@@ -108,28 +96,25 @@ src
 
 #### Component Breakdown
 
-> Use this section to go into further depth regarding your components, including breaking down the components as stateless or stateful, and considering the passing of data between those components.
 
 |  Component   |    Type    | state | props | Description                                                      |
 | :----------: | :--------: | :---: | :---: | :--------------------------------------------------------------- |
-|    Header    | functional |   n   |   n   | _The header will contain the navigation and logo._               |
-|  Navigation  | functional |   n   |   n   | _The navigation will provide a link to each of the pages._       |
-|   Gallery    |   class    |   y   |   n   | _The gallery will render the posts using cards in flexbox._      |
-| Gallery Card | functional |   n   |   y   | _The cards will render the post info via props._                 |
-|    Footer    | functional |   n   |   n   | _The footer will show info about me and a link to my portfolio._ |
-|    Footer    | functional |   n   |   n   | _The footer will show info about me and a link to my portfolio._ |
-|    Footer    | functional |   n   |   n   | _The footer will show info about me and a link to my portfolio._ |
-|    Footer    | functional |   n   |   n   | _The footer will show info about me and a link to my portfolio._ |
+|    Header    | functional |   n   |   n   | _The header will contain the title and logo._               |
+|     Nav      | functional |   n   |   n   | _The navigation will provide a link to each of the pages through the login/logout buttons._       |
+|   Footer     |   class    |   y   |   n   | _The footer will show info about me and a link to my portfolio._      |
+|    Main      | functional |   n   |   y   | _This is the main div where all screens are rendered(recording and looking up meals)._                 |
+|   LoginBtn   | functional |   n   |   n   | _Brings user to login screen._ |
+|  LogoutBtn   | functional |   n   |   n   | _Brings user to logout screen._ |
+|   Display    | functional |   n   |   n   | _Displays users recordings by week._ |
+|    Record    | functional |   n   |   n   | _This special component is where the user actually logs their meals to._ |
 
 #### Time Estimates
 
-> Use this section to estimate the time necessary to build out each of the components you've described above.
-
-| Task                | Priority | Estimated Time | Time Invested | Actual Time |
-| ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Add Contact Form    |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
-| Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
-| TOTAL               |          |     6 hrs      |     3 hrs     |     TBD     |
+| Task                       | Priority | Estimated Time | Time Invested | Actual Time |
+| -------------------        | :------: | :------------: | :-----------: | :---------: |
+| Create React App (frontend)|    M     |     35 hrs      |     TBD     |     TBD     |
+| Create CRUD (backend)      |    H     |     10 hrs      |     TBD     |     TBD     |
+| TOTAL                      |          |     45 hrs      |     TBD     |     TBD     |
 
 
 <br>
