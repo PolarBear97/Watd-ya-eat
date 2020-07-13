@@ -88,7 +88,6 @@ src
       |__ Create.js
 |__ services/
 
-```
 
 #### Component Breakdown
 
