@@ -44,10 +44,8 @@ _The **Wat'd Ya Eat?** MVP is a full stack CRUD application. The user can create
 | :--------------: | :----------------------------------------- |
 |      React       | _Foundation for frontend components._ |
 |   React Router   | _For our react routes._ |
-|     Bootsnap     | _Reduces boot times through caching._ |
-|     Express      | _For handling our api data._ |
 |    rack-cors     | _For handling Cross-Origin Resource Sharing._|
-|      eyebug      | _debugger console._|
+|      beyebug     | _debugger console._|
 |      rails       | _Speeds up development._|
 
 <br>
