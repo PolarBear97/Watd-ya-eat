@@ -78,11 +78,14 @@ src
       |__ Header.jsx
       |__ Nav.jsx
       |__ Footer.jsx
-      |__ Main.jsx
       |__ LoginBtn.jsx
       |__ LogoutBtn.jsx
-      |__ Display.jsx
-      |__ Record.jsx
+      |__ Form.jsx
+      |__ Content.jsx
+|__ pages/
+      |__ Login.js
+      |__ Main.js
+      |__ Create.js
 |__ services/
 
 ```
@@ -95,14 +98,13 @@ src
 |    Header    | functional |   n   |   n   | _The header will contain the title and logo._               |
 |     Nav      | functional |   y   |   n   | _The navigation will provide a link to each of the pages through the login/logout buttons._       |
 |   Footer     | functional |   n   |   n   | _The footer will show info about me and a link to my portfolio._      |
-|    Main      | functional |   n   |   y   | _This is the main div where all screens are rendered(recording and looking up meals)._                 |
 |   LoginBtn   | functional |   n   |   y   | _Brings user to login screen._ |
 |  LogoutBtn   | functional |   n   |   y   | _Brings user to logout screen._ |
 |   Display    | functional |   n   |   y   | _Displays users recordings by week._ |
-|    Record    | functional |   y   |   n   | _This special component is where the user actually logs their meals to._ |
-|    LoginPage | class      |   y   |   n   | _Login page._ |
-|    MenuPage  | class      |   y   |   n   | _Menu selection page._ |
-|  ViewingPage | class      |   y   |   n   | _This special component is where the user actually logs their meals to._ |
+|    Form    | functional |   y   |   n   | _This special component is where the user actually logs their meals to._ |
+|    Login | class      |   y   |   n   | _Login page._ |
+|    Main  | class      |   y   |   n   | _Menu page._ |
+|  Create | class      |   y   |   n   | _Creat page where creation form exists._ |
 
 #### Time Estimates
 
