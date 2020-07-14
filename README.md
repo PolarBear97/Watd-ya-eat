@@ -65,7 +65,7 @@ I expect the most trouble with the login authentication system and the create an
 
 [Tablet]
 
-[Mobile]
+[Mobile](https://app.lucidchart.com/invitations/accept/830b65b0-5009-46aa-964a-c1d04f276f01/0_0?shared=true)
 
 
 #### Component Tree
