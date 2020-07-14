@@ -61,7 +61,7 @@ I expect the most trouble with the login authentication system and the create an
 #### Wireframes
 
 
-![Desktop](https://app.lucidchart.com/invitations/accept/a0738172-d140-4ec1-85a7-49763dd62387)
+[Desktop](https://app.lucidchart.com/documents/edit/3b8076ef-8af0-49fc-a4a2-4a0cfd8d90ec/0_0?shared=true)
 
 ![Tablet](https://app.lucidchart.com/invitations/accept/a0738172-d140-4ec1-85a7-49763dd62387)
 
