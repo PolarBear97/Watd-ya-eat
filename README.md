@@ -116,9 +116,15 @@ src
 
 | Task                       | Priority | Estimated Time | Time Invested | Actual Time |
 | -------------------        | :------: | :------------: | :-----------: | :---------: |
-| Create React App (frontend)|    M     |     35 hrs      |     TBD     |     TBD     |
-| Create CRUD (backend)      |    H     |     10 hrs      |     TBD     |     TBD     |
-| TOTAL                      |          |     45 hrs      |     TBD     |     TBD     |
+| Controllers |    H     |     5 hrs      |     TBD     |     TBD     |
+| Seed Data |    H     |     2 hrs      |     TBD     |     TBD     |
+| Migrations |    H     |     5 hrs      |     TBD     |     TBD     |
+| Models |    H     |     5 hrs      |     TBD     |     TBD     |
+| Page Rendering |    H     |     15 hrs      |     TBD     |     TBD     |
+| React Pages (Login, ect) |    M     |     10 hrs      |     TBD     |     TBD     |
+| Functional Components |    M     |     10 hrs      |     TBD     |     TBD     |
+| Styling & Media queries |    L     |     10 hrs      |     TBD     |     TBD     |
+| TOTAL                      |          |     60 hrs      |     TBD     |     TBD     |
 
 
 <br>
@@ -135,9 +141,9 @@ src
 
 ## Post-MVP
 
-> Add background animations (like someone running, fitting the healthy app theme)
-> Add an option where the api data is turned into graph charts to see how a users diet has changed or remained the same over time.
-> Add a what can I do better button where the user can click it and they recieve tips for better dieting (don't eat past 7pm, try drinking less soda, etc.)
+> Add background animations (like someone running, fitting the healthy app theme).
+> Add a midnight snack option.
+> Add a what can I do better button where the user can click it and they recieve tips for better dieting (don't eat past 7pm, try drinking less soda, etc).
 > Add a meal planner where the user can create their own diet plan.
 
 ***
