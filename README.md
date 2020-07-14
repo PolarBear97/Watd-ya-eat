@@ -51,7 +51,7 @@ I expect the most trouble with the login authentication system and the create an
 |      React       | _Foundation for frontend components._ |
 |   React Router   | _For our react routes._ |
 |    rack-cors     | _For handling Cross-Origin Resource Sharing._|
-|      beyebug     | _debugger console._|
+|      byebug     | _debugger console._|
 |      rails       | _Speeds up development._|
 
 <br>
