@@ -24,7 +24,13 @@ _**Wat'd Ya Eat?** is an online food journal. In this day and age where just abo
 <br>
 
 ## MVP
-_The **Wat'd Ya Eat?** MVP is a full stack CRUD application. The user can create an account and log in each day to record your daily meals, edit or delete incorrect logs. The user can look back on previous weeks to see how their diets have changed over time. I expect the most trouble with the login authentication system and the create and edit logic on the backend. I also expect some road blocks when transfering information back up from the react components, into the database or vice versa. These are problems that were encountered during project 3.
+_The **Wat'd Ya Eat?** MVP is a full stack CRUD application. The user can create an account and log in each day to record your daily meals, edit or delete incorrect logs. The user can look back on previous weeks to see how their diets have changed over time. 
+
+<br>
+
+## Issues
+
+I expect the most trouble with the login authentication system and the create and edit logic on the backend. I also expect some road blocks when transfering information back up from the react components, into the database or vice versa. These are problems that were encountered during project 3.
 
 <br>
 
