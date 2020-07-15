@@ -1,3 +1,10 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  resources :users do
+    resources :slots do
+      resources :meals
+    end
+  end
+
+  get 'slots/:slot_id/meals', to: 'meals#slotlookup'
+
 end
