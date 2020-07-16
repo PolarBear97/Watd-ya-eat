@@ -1,28 +1,27 @@
 class AuthenticationController < ApplicationController
-  #before_action :authorize_request, except: :login
+  before_action :authorize_request, except: :login
 
-  #def login
-    #@user = User.find_by(username: login_params[:username])
-    #if @user.authenticate(login_params[:password]) 
-      #token = encode({id: @user.id})
-      #render json: {
-        #user: @user.attributes.except(:password_digest),
-        #token: token
-        #}, status: :ok
-    #else
-      #render json: { errors: 'unauthorized' }, status: :unauthorized
-    #end
-  #end
+  def login
+    @user = User.find_by_username(login_params[:username])
+    if @user.authenticate(login_params[:password]) 
+      token = encode(user_id: @user.id, username:@user.username)
+      render json: {user: @user, token: token}, 
+        status: :ok
+    else
+      render json: { error: 'unauthorized' }, 
+      status: :unauthorized
+    end
+  end
   
 
-  #def verify
-    #render json: @current_user.attributes.except(:password_digest), status: :ok
-  #end
+  def verify
+    render json: @current_user, status: :ok
+  end
 
 
-  #private
+  private
 
-  #def login_params
-    #params.require(:authentication).permit(:username, :password)
-  #end
+  def login_params
+    params.require(:authentication).permit(:username, :password)
+  end
 end
