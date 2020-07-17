@@ -1,12 +1,11 @@
 import Axios from 'axios'
 
-const JwtToken = localStorage.getItem('token') || null
 
 let apiUrl
 
 const apiUrls = {
   production: 'https://sei-items-api.herokuapp.com/api',
-  development: 'http://localhost:3000/api'
+  development: 'http://localhost:3000/'
 }
 
 if (window.location.hostname === 'localhost') {
@@ -16,11 +15,7 @@ if (window.location.hostname === 'localhost') {
 }
 
 const api = Axios.create({
-  baseURL = apiUrl,
-  headers: {
-    Authorization: `Bearer ${JwtToken}`,
-    'Access-Controller-Allow-Origin': '*'
-  }
+  baseURL: apiUrl,
 })
 
 export default api

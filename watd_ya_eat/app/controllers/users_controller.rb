@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
-  before_action :set_user, only [:show, :update, :destroy]
-  before_action :authorize_request, except: :create
+  before_action :set_user, only: [:show, :update, :destroy]
+  before_action :authorize_request, except: [:create,:index]
   def index
     @users = User.all 
     render json: @users, include: :meals, status: :ok
@@ -10,6 +10,8 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     render json: @user, include: :meals, status: :ok
   end
+
+  
   
   def create
     @user = User.new(user_params)

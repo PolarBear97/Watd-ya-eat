@@ -3330,3 +3330,1373 @@ Processing by MealsController#index as HTML
 Completed 200 OK in 5ms (Views: 2.6ms | ActiveRecord: 0.8ms | Allocations: 1860)
 
 
+Started GET "/users" for ::1 at 2020-07-16 19:54:11 -0400
+Started GET "/users" for ::1 at 2020-07-16 19:57:55 -0400
+Started GET "/users" for ::1 at 2020-07-16 19:59:47 -0400
+Started GET "/users" for ::1 at 2020-07-16 20:06:57 -0400
+  [1m[35m (66.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/Users/robertskrzypczak/General_Assembly/sei/neptune/unit_4/week_3/project-4/Watd-ya-eat/watd_ya_eat/app/controllers/users_controller.rb:2: syntax error, unexpected [, expecting `do' or '{' or '('
+...before_action :set_user, only [:show, :update, :destroy]
+...                              ^
+):
+  
+app/controllers/users_controller.rb:2: syntax error, unexpected [, expecting `do' or '{' or '('
+app/controllers/users_controller.rb:2: syntax error, unexpected [, expecting `do' or '{' or '('
+Started GET "/users" for ::1 at 2020-07-16 20:07:54 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (14.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  [1m[36mMeal Load (1.9ms)[0m  [1m[34mSELECT "meals".* FROM "meals" WHERE "meals"."user_id" = $1[0m  [["user_id", 7]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  [1m[36mMeal Load (0.3ms)[0m  [1m[34mSELECT "meals".* FROM "meals" WHERE "meals"."user_id" = $1[0m  [["user_id", 8]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  [1m[36mMeal Load (0.3ms)[0m  [1m[34mSELECT "meals".* FROM "meals" WHERE "meals"."user_id" = $1[0m  [["user_id", 9]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  [1m[36mMeal Load (0.2ms)[0m  [1m[34mSELECT "meals".* FROM "meals" WHERE "meals"."user_id" = $1[0m  [["user_id", 10]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  [1m[36mMeal Load (0.3ms)[0m  [1m[34mSELECT "meals".* FROM "meals" WHERE "meals"."user_id" = $1[0m  [["user_id", 11]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  [1m[36mMeal Load (0.2ms)[0m  [1m[34mSELECT "meals".* FROM "meals" WHERE "meals"."user_id" = $1[0m  [["user_id", 12]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  [1m[36mMeal Load (0.2ms)[0m  [1m[34mSELECT "meals".* FROM "meals" WHERE "meals"."user_id" = $1[0m  [["user_id", 13]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  [1m[36mMeal Load (0.2ms)[0m  [1m[34mSELECT "meals".* FROM "meals" WHERE "meals"."user_id" = $1[0m  [["user_id", 14]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  [1m[36mMeal Load (0.2ms)[0m  [1m[34mSELECT "meals".* FROM "meals" WHERE "meals"."user_id" = $1[0m  [["user_id", 15]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  [1m[36mMeal Load (0.2ms)[0m  [1m[34mSELECT "meals".* FROM "meals" WHERE "meals"."user_id" = $1[0m  [["user_id", 16]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  [1m[36mMeal Load (0.2ms)[0m  [1m[34mSELECT "meals".* FROM "meals" WHERE "meals"."user_id" = $1[0m  [["user_id", 17]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  [1m[36mMeal Load (0.2ms)[0m  [1m[34mSELECT "meals".* FROM "meals" WHERE "meals"."user_id" = $1[0m  [["user_id", 18]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+Completed 200 OK in 678ms (Views: 329.9ms | ActiveRecord: 56.5ms | Allocations: 26756)
+
+
+Started GET "/slots/9/meals" for ::1 at 2020-07-16 22:05:18 -0400
+  [1m[35m (37.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MealsController#slotlookup as HTML
+  Parameters: {"slot_id"=>"9"}
+  [1m[36mSlot Load (71.1ms)[0m  [1m[34mSELECT "slots".* FROM "slots" WHERE "slots"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/meals_controller.rb:27:in `slotlookup'
+  [1m[36mMeal Load (1.7ms)[0m  [1m[34mSELECT "meals".* FROM "meals" WHERE "meals"."slot_id" = $1[0m  [["slot_id", 9]]
+  ↳ app/controllers/meals_controller.rb:29:in `slotlookup'
+Completed 200 OK in 414ms (Views: 9.8ms | ActiveRecord: 159.1ms | Allocations: 9847)
+
+
+Started GET "/slots/9/meals" for ::1 at 2020-07-16 22:06:05 -0400
+Processing by MealsController#slotlookup as HTML
+  Parameters: {"slot_id"=>"9"}
+  [1m[36mSlot Load (46.4ms)[0m  [1m[34mSELECT "slots".* FROM "slots" WHERE "slots"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/meals_controller.rb:27:in `slotlookup'
+  [1m[36mMeal Load (19.6ms)[0m  [1m[34mSELECT "meals".* FROM "meals" WHERE "meals"."slot_id" = $1[0m  [["slot_id", 9]]
+  ↳ app/controllers/meals_controller.rb:29:in `slotlookup'
+Completed 200 OK in 72ms (Views: 3.6ms | ActiveRecord: 66.0ms | Allocations: 1765)
+
+
+Started GET "/slots/9/meals" for ::1 at 2020-07-16 22:51:24 -0400
+Processing by MealsController#slotlookup as HTML
+  Parameters: {"slot_id"=>"9"}
+  [1m[36mSlot Load (16.2ms)[0m  [1m[34mSELECT "slots".* FROM "slots" WHERE "slots"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/meals_controller.rb:27:in `slotlookup'
+  [1m[36mMeal Load (1.6ms)[0m  [1m[34mSELECT "meals".* FROM "meals" WHERE "meals"."slot_id" = $1[0m  [["slot_id", 9]]
+  ↳ app/controllers/meals_controller.rb:29:in `slotlookup'
+Completed 200 OK in 24ms (Views: 2.6ms | ActiveRecord: 18.0ms | Allocations: 1864)
+
+
+Started GET "/slots/9/meals" for ::1 at 2020-07-16 22:52:13 -0400
+Processing by MealsController#slotlookup as HTML
+  Parameters: {"slot_id"=>"9"}
+  [1m[36mSlot Load (0.4ms)[0m  [1m[34mSELECT "slots".* FROM "slots" WHERE "slots"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/meals_controller.rb:27:in `slotlookup'
+  [1m[36mMeal Load (0.7ms)[0m  [1m[34mSELECT "meals".* FROM "meals" WHERE "meals"."slot_id" = $1[0m  [["slot_id", 9]]
+  ↳ app/controllers/meals_controller.rb:29:in `slotlookup'
+Completed 200 OK in 6ms (Views: 3.2ms | ActiveRecord: 1.2ms | Allocations: 1765)
+
+
+Started GET "/slots/9/meals" for ::1 at 2020-07-16 22:52:21 -0400
+Processing by MealsController#slotlookup as HTML
+  Parameters: {"slot_id"=>"9"}
+  [1m[36mSlot Load (1.7ms)[0m  [1m[34mSELECT "slots".* FROM "slots" WHERE "slots"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/meals_controller.rb:27:in `slotlookup'
+  [1m[36mMeal Load (0.5ms)[0m  [1m[34mSELECT "meals".* FROM "meals" WHERE "meals"."slot_id" = $1[0m  [["slot_id", 9]]
+  ↳ app/controllers/meals_controller.rb:29:in `slotlookup'
+Completed 200 OK in 8ms (Views: 3.6ms | ActiveRecord: 2.1ms | Allocations: 1765)
+
+
+Started GET "/slots/9/meals" for ::1 at 2020-07-16 22:52:25 -0400
+Processing by MealsController#slotlookup as HTML
+  Parameters: {"slot_id"=>"9"}
+  [1m[36mSlot Load (1.1ms)[0m  [1m[34mSELECT "slots".* FROM "slots" WHERE "slots"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/meals_controller.rb:27:in `slotlookup'
+  [1m[36mMeal Load (0.4ms)[0m  [1m[34mSELECT "meals".* FROM "meals" WHERE "meals"."slot_id" = $1[0m  [["slot_id", 9]]
+  ↳ app/controllers/meals_controller.rb:29:in `slotlookup'
+Completed 200 OK in 7ms (Views: 3.1ms | ActiveRecord: 1.6ms | Allocations: 1746)
+
+
+Started GET "/slots/9/meals" for ::1 at 2020-07-16 22:52:35 -0400
+Processing by MealsController#slotlookup as HTML
+  Parameters: {"slot_id"=>"9"}
+  [1m[36mSlot Load (0.7ms)[0m  [1m[34mSELECT "slots".* FROM "slots" WHERE "slots"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/meals_controller.rb:27:in `slotlookup'
+  [1m[36mMeal Load (12.0ms)[0m  [1m[34mSELECT "meals".* FROM "meals" WHERE "meals"."slot_id" = $1[0m  [["slot_id", 9]]
+  ↳ app/controllers/meals_controller.rb:29:in `slotlookup'
+Completed 200 OK in 19ms (Views: 3.8ms | ActiveRecord: 12.7ms | Allocations: 1746)
+
+
+Started GET "/slots/9/meals" for ::1 at 2020-07-16 22:52:49 -0400
+Processing by MealsController#slotlookup as HTML
+  Parameters: {"slot_id"=>"9"}
+  [1m[36mSlot Load (0.7ms)[0m  [1m[34mSELECT "slots".* FROM "slots" WHERE "slots"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/meals_controller.rb:27:in `slotlookup'
+  [1m[36mMeal Load (0.4ms)[0m  [1m[34mSELECT "meals".* FROM "meals" WHERE "meals"."slot_id" = $1[0m  [["slot_id", 9]]
+  ↳ app/controllers/meals_controller.rb:29:in `slotlookup'
+Completed 200 OK in 7ms (Views: 3.8ms | ActiveRecord: 1.2ms | Allocations: 1746)
+
+
+Started GET "/slots/9/meals" for ::1 at 2020-07-16 22:52:52 -0400
+Processing by MealsController#slotlookup as HTML
+  Parameters: {"slot_id"=>"9"}
+  [1m[36mSlot Load (1.8ms)[0m  [1m[34mSELECT "slots".* FROM "slots" WHERE "slots"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/meals_controller.rb:27:in `slotlookup'
+  [1m[36mMeal Load (0.3ms)[0m  [1m[34mSELECT "meals".* FROM "meals" WHERE "meals"."slot_id" = $1[0m  [["slot_id", 9]]
+  ↳ app/controllers/meals_controller.rb:29:in `slotlookup'
+Completed 200 OK in 7ms (Views: 2.8ms | ActiveRecord: 2.1ms | Allocations: 1746)
+
+
+Started GET "/slots/9/meals" for ::1 at 2020-07-16 22:52:58 -0400
+Processing by MealsController#slotlookup as HTML
+  Parameters: {"slot_id"=>"9"}
+  [1m[36mSlot Load (0.2ms)[0m  [1m[34mSELECT "slots".* FROM "slots" WHERE "slots"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/meals_controller.rb:27:in `slotlookup'
+  [1m[36mMeal Load (3.0ms)[0m  [1m[34mSELECT "meals".* FROM "meals" WHERE "meals"."slot_id" = $1[0m  [["slot_id", 9]]
+  ↳ app/controllers/meals_controller.rb:29:in `slotlookup'
+Completed 200 OK in 8ms (Views: 2.5ms | ActiveRecord: 3.3ms | Allocations: 1746)
+
+
+Started GET "/slots/9/meals" for ::1 at 2020-07-16 22:53:06 -0400
+Processing by MealsController#slotlookup as HTML
+  Parameters: {"slot_id"=>"9"}
+  [1m[36mSlot Load (0.4ms)[0m  [1m[34mSELECT "slots".* FROM "slots" WHERE "slots"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/meals_controller.rb:27:in `slotlookup'
+  [1m[36mMeal Load (0.3ms)[0m  [1m[34mSELECT "meals".* FROM "meals" WHERE "meals"."slot_id" = $1[0m  [["slot_id", 9]]
+  ↳ app/controllers/meals_controller.rb:29:in `slotlookup'
+Completed 200 OK in 6ms (Views: 3.2ms | ActiveRecord: 0.8ms | Allocations: 1746)
+
+
+Started GET "/slots/9/meals" for ::1 at 2020-07-16 22:53:10 -0400
+Processing by MealsController#slotlookup as HTML
+  Parameters: {"slot_id"=>"9"}
+  [1m[36mSlot Load (0.6ms)[0m  [1m[34mSELECT "slots".* FROM "slots" WHERE "slots"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/meals_controller.rb:27:in `slotlookup'
+  [1m[36mMeal Load (0.8ms)[0m  [1m[34mSELECT "meals".* FROM "meals" WHERE "meals"."slot_id" = $1[0m  [["slot_id", 9]]
+  ↳ app/controllers/meals_controller.rb:29:in `slotlookup'
+Completed 200 OK in 6ms (Views: 2.8ms | ActiveRecord: 1.4ms | Allocations: 1746)
+
+
+Started GET "/slots/9/meals" for ::1 at 2020-07-16 22:53:13 -0400
+Processing by MealsController#slotlookup as HTML
+  Parameters: {"slot_id"=>"9"}
+  [1m[36mSlot Load (0.2ms)[0m  [1m[34mSELECT "slots".* FROM "slots" WHERE "slots"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/meals_controller.rb:27:in `slotlookup'
+  [1m[36mMeal Load (0.2ms)[0m  [1m[34mSELECT "meals".* FROM "meals" WHERE "meals"."slot_id" = $1[0m  [["slot_id", 9]]
+  ↳ app/controllers/meals_controller.rb:29:in `slotlookup'
+Completed 200 OK in 5ms (Views: 2.9ms | ActiveRecord: 0.4ms | Allocations: 1746)
+
+
+Started GET "/slots/9/meals" for ::1 at 2020-07-16 22:53:18 -0400
+Processing by MealsController#slotlookup as HTML
+  Parameters: {"slot_id"=>"9"}
+  [1m[36mSlot Load (0.3ms)[0m  [1m[34mSELECT "slots".* FROM "slots" WHERE "slots"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/meals_controller.rb:27:in `slotlookup'
+  [1m[36mMeal Load (0.3ms)[0m  [1m[34mSELECT "meals".* FROM "meals" WHERE "meals"."slot_id" = $1[0m  [["slot_id", 9]]
+  ↳ app/controllers/meals_controller.rb:29:in `slotlookup'
+Completed 200 OK in 5ms (Views: 2.8ms | ActiveRecord: 0.6ms | Allocations: 1746)
+
+
+Started GET "/slots/9/meals" for ::1 at 2020-07-16 22:53:24 -0400
+Processing by MealsController#slotlookup as HTML
+  Parameters: {"slot_id"=>"9"}
+  [1m[36mSlot Load (10.3ms)[0m  [1m[34mSELECT "slots".* FROM "slots" WHERE "slots"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/meals_controller.rb:27:in `slotlookup'
+  [1m[36mMeal Load (0.2ms)[0m  [1m[34mSELECT "meals".* FROM "meals" WHERE "meals"."slot_id" = $1[0m  [["slot_id", 9]]
+  ↳ app/controllers/meals_controller.rb:29:in `slotlookup'
+Completed 200 OK in 15ms (Views: 2.4ms | ActiveRecord: 10.5ms | Allocations: 1746)
+
+
+  [1m[35m (59.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (98.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (778.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "watd_ya_eat_development"[0m
+  [1m[35m (286.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "watd_ya_eat_test"[0m
+  [1m[35m (3662.0ms)[0m  [1m[35mCREATE DATABASE "watd_ya_eat_development" ENCODING = 'unicode'[0m
+  [1m[35m (200.3ms)[0m  [1m[35mCREATE DATABASE "watd_ya_eat_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "meals" CASCADE[0m
+  [1m[35m (53.6ms)[0m  [1m[35mCREATE TABLE "meals" ("id" bigserial primary key, "user_id" bigint NOT NULL, "slot_id" bigint NOT NULL, "foodeaten" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE  INDEX  "index_meals_on_slot_id" ON "meals"  ("slot_id")[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE  INDEX  "index_meals_on_user_id" ON "meals"  ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "slots" CASCADE[0m
+  [1m[35m (43.9ms)[0m  [1m[35mCREATE TABLE "slots" ("id" bigserial primary key, "meal_slot" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (4.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying, "password_digest" character varying, "email" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.7ms)[0m  [1m[35mALTER TABLE "meals" ADD CONSTRAINT "fk_rails_33fe13749b"
+FOREIGN KEY ("slot_id")
+  REFERENCES "slots" ("id")
+[0m
+  [1m[35m (20.3ms)[0m  [1m[35mALTER TABLE "meals" ADD CONSTRAINT "fk_rails_6819997d7c"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200714233938)[0m
+  [1m[35m (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200714171833),
+(20200714173751),
+(20200714233150);
+
+[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-07-17 03:02:34.352682"], ["updated_at", "2020-07-17 03:02:34.352682"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "cc8e2d69b81bf184eaed6a3359c62dfd4440aa17"], ["created_at", "2020-07-17 03:02:34.384234"], ["updated_at", "2020-07-17 03:02:34.384234"]]
+  [1m[35m (29.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "meals" CASCADE[0m
+  [1m[35m (142.2ms)[0m  [1m[35mCREATE TABLE "meals" ("id" bigserial primary key, "user_id" bigint NOT NULL, "slot_id" bigint NOT NULL, "foodeaten" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE  INDEX  "index_meals_on_slot_id" ON "meals"  ("slot_id")[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE  INDEX  "index_meals_on_user_id" ON "meals"  ("user_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "slots" CASCADE[0m
+  [1m[35m (65.5ms)[0m  [1m[35mCREATE TABLE "slots" ("id" bigserial primary key, "meal_slot" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (44.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying, "password_digest" character varying, "email" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (3.1ms)[0m  [1m[35mALTER TABLE "meals" ADD CONSTRAINT "fk_rails_33fe13749b"
+FOREIGN KEY ("slot_id")
+  REFERENCES "slots" ("id")
+[0m
+  [1m[35m (1.7ms)[0m  [1m[35mALTER TABLE "meals" ADD CONSTRAINT "fk_rails_6819997d7c"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200714233938)[0m
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200714171833),
+(20200714173751),
+(20200714233150);
+
+[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-07-17 03:02:34.860475"], ["updated_at", "2020-07-17 03:02:34.860475"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.3ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2020-07-17 03:02:34.867219"], ["key", "environment"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "cc8e2d69b81bf184eaed6a3359c62dfd4440aa17"], ["created_at", "2020-07-17 03:02:34.873953"], ["updated_at", "2020-07-17 03:02:34.873953"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "polarbearpete7"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "keanu7reeves"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "toastmaster500"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSlot Create (0.8ms)[0m  [1m[32mINSERT INTO "slots" ("meal_slot", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["meal_slot", "breakfast"], ["created_at", "2020-07-17 03:02:35.190872"], ["updated_at", "2020-07-17 03:02:35.190872"]]
+  [1m[35m (37.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSlot Create (0.3ms)[0m  [1m[32mINSERT INTO "slots" ("meal_slot", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["meal_slot", "lunch"], ["created_at", "2020-07-17 03:02:35.234028"], ["updated_at", "2020-07-17 03:02:35.234028"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSlot Create (0.3ms)[0m  [1m[32mINSERT INTO "slots" ("meal_slot", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["meal_slot", "dinner"], ["created_at", "2020-07-17 03:02:35.239648"], ["updated_at", "2020-07-17 03:02:35.239648"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSlot Create (0.3ms)[0m  [1m[32mINSERT INTO "slots" ("meal_slot", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["meal_slot", "snack"], ["created_at", "2020-07-17 03:02:35.244943"], ["updated_at", "2020-07-17 03:02:35.244943"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mSlot Load (0.5ms)[0m  [1m[34mSELECT "slots".* FROM "slots" WHERE "slots"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mSlot Load (0.2ms)[0m  [1m[34mSELECT "slots".* FROM "slots" WHERE "slots"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mSlot Load (0.2ms)[0m  [1m[34mSELECT "slots".* FROM "slots" WHERE "slots"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mSlot Load (0.2ms)[0m  [1m[34mSELECT "slots".* FROM "slots" WHERE "slots"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mSlot Load (0.3ms)[0m  [1m[34mSELECT "slots".* FROM "slots" WHERE "slots"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mSlot Load (0.2ms)[0m  [1m[34mSELECT "slots".* FROM "slots" WHERE "slots"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mSlot Load (0.1ms)[0m  [1m[34mSELECT "slots".* FROM "slots" WHERE "slots"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mSlot Load (0.1ms)[0m  [1m[34mSELECT "slots".* FROM "slots" WHERE "slots"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mSlot Load (0.1ms)[0m  [1m[34mSELECT "slots".* FROM "slots" WHERE "slots"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "polarbearpete7"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "keanu7reeves"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "toastmaster500"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSlot Create (0.5ms)[0m  [1m[32mINSERT INTO "slots" ("meal_slot", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["meal_slot", "breakfast"], ["created_at", "2020-07-17 03:02:58.581448"], ["updated_at", "2020-07-17 03:02:58.581448"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSlot Create (0.3ms)[0m  [1m[32mINSERT INTO "slots" ("meal_slot", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["meal_slot", "lunch"], ["created_at", "2020-07-17 03:02:58.586537"], ["updated_at", "2020-07-17 03:02:58.586537"]]
+  [1m[35m (3.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSlot Create (0.3ms)[0m  [1m[32mINSERT INTO "slots" ("meal_slot", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["meal_slot", "dinner"], ["created_at", "2020-07-17 03:02:58.593757"], ["updated_at", "2020-07-17 03:02:58.593757"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSlot Create (0.2ms)[0m  [1m[32mINSERT INTO "slots" ("meal_slot", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["meal_slot", "snack"], ["created_at", "2020-07-17 03:02:58.597966"], ["updated_at", "2020-07-17 03:02:58.597966"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mSlot Load (0.3ms)[0m  [1m[34mSELECT "slots".* FROM "slots" WHERE "slots"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mSlot Load (0.2ms)[0m  [1m[34mSELECT "slots".* FROM "slots" WHERE "slots"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mSlot Load (0.2ms)[0m  [1m[34mSELECT "slots".* FROM "slots" WHERE "slots"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mSlot Load (0.2ms)[0m  [1m[34mSELECT "slots".* FROM "slots" WHERE "slots"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mSlot Load (0.2ms)[0m  [1m[34mSELECT "slots".* FROM "slots" WHERE "slots"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mSlot Load (0.2ms)[0m  [1m[34mSELECT "slots".* FROM "slots" WHERE "slots"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mSlot Load (0.1ms)[0m  [1m[34mSELECT "slots".* FROM "slots" WHERE "slots"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mSlot Load (0.2ms)[0m  [1m[34mSELECT "slots".* FROM "slots" WHERE "slots"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mSlot Load (0.1ms)[0m  [1m[34mSELECT "slots".* FROM "slots" WHERE "slots"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+Started GET "/slots/9/meals" for ::1 at 2020-07-16 23:06:23 -0400
+  [1m[35m (163.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MealsController#slotlookup as HTML
+  Parameters: {"slot_id"=>"9"}
+  [1m[36mSlot Load (366.1ms)[0m  [1m[34mSELECT "slots".* FROM "slots" WHERE "slots"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/meals_controller.rb:27:in `slotlookup'
+Completed 404 Not Found in 1303ms (ActiveRecord: 1001.3ms | Allocations: 2619)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Slot with 'id'=9):
+  
+app/controllers/meals_controller.rb:27:in `slotlookup'
+Started GET "/slots/9/meals" for ::1 at 2020-07-16 23:06:45 -0400
+Processing by MealsController#slotlookup as HTML
+  Parameters: {"slot_id"=>"9"}
+  [1m[36mSlot Load (0.7ms)[0m  [1m[34mSELECT "slots".* FROM "slots" WHERE "slots"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/meals_controller.rb:27:in `slotlookup'
+Completed 404 Not Found in 3ms (ActiveRecord: 0.7ms | Allocations: 668)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Slot with 'id'=9):
+  
+app/controllers/meals_controller.rb:27:in `slotlookup'
+Started GET "/" for ::1 at 2020-07-16 23:07:01 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/robertskrzypczak/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.0.3.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/robertskrzypczak/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.0.3.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 59.4ms | Allocations: 183)
+Completed 200 OK in 84ms (Views: 60.5ms | ActiveRecord: 0.0ms | Allocations: 855)
+
+
+Started GET "/users" for ::1 at 2020-07-16 23:07:09 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (71.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+Completed 200 OK in 87ms (Views: 4.1ms | ActiveRecord: 73.2ms | Allocations: 2269)
+
+
+Started GET "/users/20/meals" for ::1 at 2020-07-16 23:07:27 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/users/20/meals"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/slots/12/meals" for ::1 at 2020-07-16 23:07:49 -0400
+Processing by MealsController#slotlookup as HTML
+  Parameters: {"slot_id"=>"12"}
+  [1m[36mSlot Load (0.5ms)[0m  [1m[34mSELECT "slots".* FROM "slots" WHERE "slots"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/meals_controller.rb:27:in `slotlookup'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.5ms | Allocations: 637)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Slot with 'id'=12):
+  
+app/controllers/meals_controller.rb:27:in `slotlookup'
+Started GET "/slots" for ::1 at 2020-07-16 23:07:57 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/slots"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/meals" for ::1 at 2020-07-16 23:08:04 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/meals"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/users" for ::1 at 2020-07-16 23:08:08 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.4ms | Allocations: 845)
+
+
+  [1m[36mUser Load (44.0ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[35m (89.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (42.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "polarbearpete7"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "keanu7reeves"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "toastmaster500"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSlot Create (59.5ms)[0m  [1m[32mINSERT INTO "slots" ("meal_slot", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["meal_slot", "breakfast"], ["created_at", "2020-07-17 03:13:39.723929"], ["updated_at", "2020-07-17 03:13:39.723929"]]
+  [1m[35m (41.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSlot Create (0.4ms)[0m  [1m[32mINSERT INTO "slots" ("meal_slot", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["meal_slot", "lunch"], ["created_at", "2020-07-17 03:13:39.830464"], ["updated_at", "2020-07-17 03:13:39.830464"]]
+  [1m[35m (59.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSlot Create (0.4ms)[0m  [1m[32mINSERT INTO "slots" ("meal_slot", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["meal_slot", "dinner"], ["created_at", "2020-07-17 03:13:39.895651"], ["updated_at", "2020-07-17 03:13:39.895651"]]
+  [1m[35m (81.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSlot Create (0.3ms)[0m  [1m[32mINSERT INTO "slots" ("meal_slot", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["meal_slot", "snack"], ["created_at", "2020-07-17 03:13:39.983781"], ["updated_at", "2020-07-17 03:13:39.983781"]]
+  [1m[35m (81.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mSlot Load (35.6ms)[0m  [1m[34mSELECT "slots".* FROM "slots" WHERE "slots"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mSlot Load (0.2ms)[0m  [1m[34mSELECT "slots".* FROM "slots" WHERE "slots"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mSlot Load (0.2ms)[0m  [1m[34mSELECT "slots".* FROM "slots" WHERE "slots"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mSlot Load (0.2ms)[0m  [1m[34mSELECT "slots".* FROM "slots" WHERE "slots"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mSlot Load (0.2ms)[0m  [1m[34mSELECT "slots".* FROM "slots" WHERE "slots"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mSlot Load (0.2ms)[0m  [1m[34mSELECT "slots".* FROM "slots" WHERE "slots"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mSlot Load (0.1ms)[0m  [1m[34mSELECT "slots".* FROM "slots" WHERE "slots"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mSlot Load (0.2ms)[0m  [1m[34mSELECT "slots".* FROM "slots" WHERE "slots"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mSlot Load (0.1ms)[0m  [1m[34mSELECT "slots".* FROM "slots" WHERE "slots"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mUser Load (40.9ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (18.9ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[35m (42.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (41.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "polarbearpete7"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "keanu7reeves"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "toastmaster500"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSlot Create (0.6ms)[0m  [1m[32mINSERT INTO "slots" ("meal_slot", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["meal_slot", "breakfast"], ["created_at", "2020-07-17 03:19:55.829498"], ["updated_at", "2020-07-17 03:19:55.829498"]]
+  [1m[35m (40.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSlot Create (0.3ms)[0m  [1m[32mINSERT INTO "slots" ("meal_slot", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["meal_slot", "lunch"], ["created_at", "2020-07-17 03:19:55.876692"], ["updated_at", "2020-07-17 03:19:55.876692"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSlot Create (0.3ms)[0m  [1m[32mINSERT INTO "slots" ("meal_slot", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["meal_slot", "dinner"], ["created_at", "2020-07-17 03:19:55.882067"], ["updated_at", "2020-07-17 03:19:55.882067"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSlot Create (0.2ms)[0m  [1m[32mINSERT INTO "slots" ("meal_slot", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["meal_slot", "snack"], ["created_at", "2020-07-17 03:19:55.887055"], ["updated_at", "2020-07-17 03:19:55.887055"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mSlot Load (0.3ms)[0m  [1m[34mSELECT "slots".* FROM "slots" WHERE "slots"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mSlot Load (0.2ms)[0m  [1m[34mSELECT "slots".* FROM "slots" WHERE "slots"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mSlot Load (0.3ms)[0m  [1m[34mSELECT "slots".* FROM "slots" WHERE "slots"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mSlot Load (0.2ms)[0m  [1m[34mSELECT "slots".* FROM "slots" WHERE "slots"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mSlot Load (0.3ms)[0m  [1m[34mSELECT "slots".* FROM "slots" WHERE "slots"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mSlot Load (0.4ms)[0m  [1m[34mSELECT "slots".* FROM "slots" WHERE "slots"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mSlot Load (0.2ms)[0m  [1m[34mSELECT "slots".* FROM "slots" WHERE "slots"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mSlot Load (0.3ms)[0m  [1m[34mSELECT "slots".* FROM "slots" WHERE "slots"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mSlot Load (0.2ms)[0m  [1m[34mSELECT "slots".* FROM "slots" WHERE "slots"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "polarbearpete7"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (40.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "polarbearpete7"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (22.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "polarbearpete7"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (41.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "polarbearpete7"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (40.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "polarbearpete7"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (21.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (46.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "polarbearpete7"], ["LIMIT", 1]]
+  [1m[36mUser Create (38.8ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "polarbearpete7"], ["password_digest", "$2a$12$dUpNlsoy8w5UBstWUPe.RO2POZg3SrBHV6MPilranyfpqGAHp8UZO"], ["email", "example@something.com"], ["created_at", "2020-07-17 04:05:25.120896"], ["updated_at", "2020-07-17 04:05:25.120896"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "keanu7reeves"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "keanu7reeves"], ["password_digest", "$2a$12$T1O.frpe7cw32X.Ad693h.4lc2cUIrHxMXN6C2DGt.MQiBSX45/9i"], ["email", "otherexample@something.com"], ["created_at", "2020-07-17 04:05:25.430467"], ["updated_at", "2020-07-17 04:05:25.430467"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "toastmaster500"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "toastmaster500"], ["password_digest", "$2a$12$UGzlN/iFBSXqugpylmbtueYn29PY3RJLWDM4Q3l6SsQghVOsY.bJ6"], ["email", "anotherexample@something.com"], ["created_at", "2020-07-17 04:05:25.704563"], ["updated_at", "2020-07-17 04:05:25.704563"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSlot Create (41.1ms)[0m  [1m[32mINSERT INTO "slots" ("meal_slot", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["meal_slot", "breakfast"], ["created_at", "2020-07-17 04:05:25.771343"], ["updated_at", "2020-07-17 04:05:25.771343"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSlot Create (0.3ms)[0m  [1m[32mINSERT INTO "slots" ("meal_slot", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["meal_slot", "lunch"], ["created_at", "2020-07-17 04:05:25.818158"], ["updated_at", "2020-07-17 04:05:25.818158"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSlot Create (0.3ms)[0m  [1m[32mINSERT INTO "slots" ("meal_slot", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["meal_slot", "dinner"], ["created_at", "2020-07-17 04:05:25.823302"], ["updated_at", "2020-07-17 04:05:25.823302"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSlot Create (0.3ms)[0m  [1m[32mINSERT INTO "slots" ("meal_slot", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["meal_slot", "snack"], ["created_at", "2020-07-17 04:05:25.827970"], ["updated_at", "2020-07-17 04:05:25.827970"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mSlot Load (41.8ms)[0m  [1m[34mSELECT "slots".* FROM "slots" WHERE "slots"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (24.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (62.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "polarbearpete7"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "keanu7reeves"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "toastmaster500"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSlot Create (14.6ms)[0m  [1m[32mINSERT INTO "slots" ("meal_slot", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["meal_slot", "breakfast"], ["created_at", "2020-07-17 04:07:05.806640"], ["updated_at", "2020-07-17 04:07:05.806640"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSlot Create (0.6ms)[0m  [1m[32mINSERT INTO "slots" ("meal_slot", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["meal_slot", "lunch"], ["created_at", "2020-07-17 04:07:05.828055"], ["updated_at", "2020-07-17 04:07:05.828055"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSlot Create (0.3ms)[0m  [1m[32mINSERT INTO "slots" ("meal_slot", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["meal_slot", "dinner"], ["created_at", "2020-07-17 04:07:05.833803"], ["updated_at", "2020-07-17 04:07:05.833803"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSlot Create (0.2ms)[0m  [1m[32mINSERT INTO "slots" ("meal_slot", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["meal_slot", "snack"], ["created_at", "2020-07-17 04:07:05.838805"], ["updated_at", "2020-07-17 04:07:05.838805"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mSlot Load (39.1ms)[0m  [1m[34mSELECT "slots".* FROM "slots" WHERE "slots"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mSlot Load (0.2ms)[0m  [1m[34mSELECT "slots".* FROM "slots" WHERE "slots"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mSlot Load (0.2ms)[0m  [1m[34mSELECT "slots".* FROM "slots" WHERE "slots"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mSlot Load (0.3ms)[0m  [1m[34mSELECT "slots".* FROM "slots" WHERE "slots"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mSlot Load (0.2ms)[0m  [1m[34mSELECT "slots".* FROM "slots" WHERE "slots"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mSlot Load (0.4ms)[0m  [1m[34mSELECT "slots".* FROM "slots" WHERE "slots"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mSlot Load (0.2ms)[0m  [1m[34mSELECT "slots".* FROM "slots" WHERE "slots"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mSlot Load (0.1ms)[0m  [1m[34mSELECT "slots".* FROM "slots" WHERE "slots"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mSlot Load (0.2ms)[0m  [1m[34mSELECT "slots".* FROM "slots" WHERE "slots"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mUser Load (65.7ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mSlot Load (53.1ms)[0m  [1m[34mSELECT "slots".* FROM "slots" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mMeal Load (42.1ms)[0m  [1m[34mSELECT "meals".* FROM "meals" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMeal Load (0.3ms)[0m  [1m[34mSELECT "meals".* FROM "meals" WHERE "meals"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 11]]
+  [1m[35m (13.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (38.9ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (387.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "watd_ya_eat_development"[0m
+  [1m[35m (183.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "watd_ya_eat_test"[0m
+  [1m[35m (2186.2ms)[0m  [1m[35mCREATE DATABASE "watd_ya_eat_development" ENCODING = 'unicode'[0m
+  [1m[35m (348.1ms)[0m  [1m[35mCREATE DATABASE "watd_ya_eat_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "meals" CASCADE[0m
+  [1m[35m (6.3ms)[0m  [1m[35mCREATE TABLE "meals" ("id" bigserial primary key, "user_id" bigint NOT NULL, "slot_id" bigint NOT NULL, "foodeaten" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE  INDEX  "index_meals_on_slot_id" ON "meals"  ("slot_id")[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_meals_on_user_id" ON "meals"  ("user_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "slots" CASCADE[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE TABLE "slots" ("id" bigserial primary key, "meal_slot" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (37.9ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying, "password_digest" character varying, "email" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (3.5ms)[0m  [1m[35mALTER TABLE "meals" ADD CONSTRAINT "fk_rails_33fe13749b"
+FOREIGN KEY ("slot_id")
+  REFERENCES "slots" ("id")
+[0m
+  [1m[35m (1.7ms)[0m  [1m[35mALTER TABLE "meals" ADD CONSTRAINT "fk_rails_6819997d7c"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200714233938)[0m
+  [1m[35m (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200714171833),
+(20200714173751),
+(20200714233150);
+
+[0m
+  [1m[35m (37.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-07-17 04:15:28.919220"], ["updated_at", "2020-07-17 04:15:28.919220"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "cc8e2d69b81bf184eaed6a3359c62dfd4440aa17"], ["created_at", "2020-07-17 04:15:28.955426"], ["updated_at", "2020-07-17 04:15:28.955426"]]
+  [1m[35m (39.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "meals" CASCADE[0m
+  [1m[35m (6.7ms)[0m  [1m[35mCREATE TABLE "meals" ("id" bigserial primary key, "user_id" bigint NOT NULL, "slot_id" bigint NOT NULL, "foodeaten" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (5.2ms)[0m  [1m[35mCREATE  INDEX  "index_meals_on_slot_id" ON "meals"  ("slot_id")[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE  INDEX  "index_meals_on_user_id" ON "meals"  ("user_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "slots" CASCADE[0m
+  [1m[35m (44.4ms)[0m  [1m[35mCREATE TABLE "slots" ("id" bigserial primary key, "meal_slot" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying, "password_digest" character varying, "email" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.6ms)[0m  [1m[35mALTER TABLE "meals" ADD CONSTRAINT "fk_rails_33fe13749b"
+FOREIGN KEY ("slot_id")
+  REFERENCES "slots" ("id")
+[0m
+  [1m[35m (1.4ms)[0m  [1m[35mALTER TABLE "meals" ADD CONSTRAINT "fk_rails_6819997d7c"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200714233938)[0m
+  [1m[35m (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200714171833),
+(20200714173751),
+(20200714233150);
+
+[0m
+  [1m[35m (77.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-07-17 04:15:29.242602"], ["updated_at", "2020-07-17 04:15:29.242602"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.3ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2020-07-17 04:15:29.249938"], ["key", "environment"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "cc8e2d69b81bf184eaed6a3359c62dfd4440aa17"], ["created_at", "2020-07-17 04:15:29.256389"], ["updated_at", "2020-07-17 04:15:29.256389"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "polarbearpete7"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "polarbearpete7"], ["password_digest", "$2a$12$jGSVj.HEOIZG3y5.2ZWJ7.M620/ZSEWctrk1xMBIVZ48hW4HWlePi"], ["email", "example@something.com"], ["created_at", "2020-07-17 04:15:29.694838"], ["updated_at", "2020-07-17 04:15:29.694838"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "keanu7reeves"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "keanu7reeves"], ["password_digest", "$2a$12$/a2LgoePhNRAOiMtbqwqjO8JzpjAREhPItyQql3dIgw01opToLJ82"], ["email", "otherexample@something.com"], ["created_at", "2020-07-17 04:15:29.965283"], ["updated_at", "2020-07-17 04:15:29.965283"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "toastmaster500"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "toastmaster500"], ["password_digest", "$2a$12$9bxCW2ynH4C73WdVPik4z.DtgWtxj4R7IjrP4c2doOIvbyNohuvwC"], ["email", "anotherexample@something.com"], ["created_at", "2020-07-17 04:15:30.223839"], ["updated_at", "2020-07-17 04:15:30.223839"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSlot Create (0.6ms)[0m  [1m[32mINSERT INTO "slots" ("meal_slot", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["meal_slot", "breakfast"], ["created_at", "2020-07-17 04:15:30.295993"], ["updated_at", "2020-07-17 04:15:30.295993"]]
+  [1m[35m (40.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSlot Create (0.3ms)[0m  [1m[32mINSERT INTO "slots" ("meal_slot", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["meal_slot", "lunch"], ["created_at", "2020-07-17 04:15:30.342501"], ["updated_at", "2020-07-17 04:15:30.342501"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSlot Create (0.3ms)[0m  [1m[32mINSERT INTO "slots" ("meal_slot", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["meal_slot", "dinner"], ["created_at", "2020-07-17 04:15:30.348146"], ["updated_at", "2020-07-17 04:15:30.348146"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSlot Create (0.2ms)[0m  [1m[32mINSERT INTO "slots" ("meal_slot", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["meal_slot", "snack"], ["created_at", "2020-07-17 04:15:30.353121"], ["updated_at", "2020-07-17 04:15:30.353121"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSlot Load (0.3ms)[0m  [1m[34mSELECT "slots".* FROM "slots" WHERE "slots"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMeal Create (1.2ms)[0m  [1m[32mINSERT INTO "meals" ("user_id", "slot_id", "foodeaten", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 1], ["slot_id", 1], ["foodeaten", "hobo sandwich"], ["created_at", "2020-07-17 04:15:30.497808"], ["updated_at", "2020-07-17 04:15:30.497808"]]
+  [1m[35m (41.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mSlot Load (0.2ms)[0m  [1m[34mSELECT "slots".* FROM "slots" WHERE "slots"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMeal Create (0.4ms)[0m  [1m[32mINSERT INTO "meals" ("user_id", "slot_id", "foodeaten", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 2], ["slot_id", 1], ["foodeaten", "ommlette"], ["created_at", "2020-07-17 04:15:30.549666"], ["updated_at", "2020-07-17 04:15:30.549666"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mSlot Load (0.2ms)[0m  [1m[34mSELECT "slots".* FROM "slots" WHERE "slots"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMeal Create (0.4ms)[0m  [1m[32mINSERT INTO "meals" ("user_id", "slot_id", "foodeaten", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 3], ["slot_id", 1], ["foodeaten", "bagel and butter"], ["created_at", "2020-07-17 04:15:30.560144"], ["updated_at", "2020-07-17 04:15:30.560144"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSlot Load (0.3ms)[0m  [1m[34mSELECT "slots".* FROM "slots" WHERE "slots"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mMeal Create (0.5ms)[0m  [1m[32mINSERT INTO "meals" ("user_id", "slot_id", "foodeaten", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 1], ["slot_id", 2], ["foodeaten", "steak"], ["created_at", "2020-07-17 04:15:30.574289"], ["updated_at", "2020-07-17 04:15:30.574289"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mSlot Load (0.2ms)[0m  [1m[34mSELECT "slots".* FROM "slots" WHERE "slots"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mMeal Create (0.4ms)[0m  [1m[32mINSERT INTO "meals" ("user_id", "slot_id", "foodeaten", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 2], ["slot_id", 2], ["foodeaten", "beer pretzil"], ["created_at", "2020-07-17 04:15:30.582728"], ["updated_at", "2020-07-17 04:15:30.582728"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mSlot Load (0.2ms)[0m  [1m[34mSELECT "slots".* FROM "slots" WHERE "slots"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mMeal Create (0.4ms)[0m  [1m[32mINSERT INTO "meals" ("user_id", "slot_id", "foodeaten", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 3], ["slot_id", 2], ["foodeaten", "nuts"], ["created_at", "2020-07-17 04:15:30.591062"], ["updated_at", "2020-07-17 04:15:30.591062"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSlot Load (0.2ms)[0m  [1m[34mSELECT "slots".* FROM "slots" WHERE "slots"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mMeal Create (0.3ms)[0m  [1m[32mINSERT INTO "meals" ("user_id", "slot_id", "foodeaten", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 1], ["slot_id", 3], ["foodeaten", "ham n cheese"], ["created_at", "2020-07-17 04:15:30.599514"], ["updated_at", "2020-07-17 04:15:30.599514"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mSlot Load (0.1ms)[0m  [1m[34mSELECT "slots".* FROM "slots" WHERE "slots"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mMeal Create (0.3ms)[0m  [1m[32mINSERT INTO "meals" ("user_id", "slot_id", "foodeaten", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 2], ["slot_id", 3], ["foodeaten", "sword fish"], ["created_at", "2020-07-17 04:15:30.607107"], ["updated_at", "2020-07-17 04:15:30.607107"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mSlot Load (0.1ms)[0m  [1m[34mSELECT "slots".* FROM "slots" WHERE "slots"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mMeal Create (0.3ms)[0m  [1m[32mINSERT INTO "meals" ("user_id", "slot_id", "foodeaten", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 3], ["slot_id", 3], ["foodeaten", "salmon"], ["created_at", "2020-07-17 04:15:30.614790"], ["updated_at", "2020-07-17 04:15:30.614790"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "polarbearpete7"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "keanu7reeves"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "toastmaster500"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSlot Create (0.5ms)[0m  [1m[32mINSERT INTO "slots" ("meal_slot", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["meal_slot", "breakfast"], ["created_at", "2020-07-17 04:15:42.423293"], ["updated_at", "2020-07-17 04:15:42.423293"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSlot Create (0.2ms)[0m  [1m[32mINSERT INTO "slots" ("meal_slot", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["meal_slot", "lunch"], ["created_at", "2020-07-17 04:15:42.428248"], ["updated_at", "2020-07-17 04:15:42.428248"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSlot Create (0.2ms)[0m  [1m[32mINSERT INTO "slots" ("meal_slot", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["meal_slot", "dinner"], ["created_at", "2020-07-17 04:15:42.432294"], ["updated_at", "2020-07-17 04:15:42.432294"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSlot Create (0.2ms)[0m  [1m[32mINSERT INTO "slots" ("meal_slot", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["meal_slot", "snack"], ["created_at", "2020-07-17 04:15:42.436669"], ["updated_at", "2020-07-17 04:15:42.436669"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSlot Load (0.3ms)[0m  [1m[34mSELECT "slots".* FROM "slots" WHERE "slots"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMeal Create (0.8ms)[0m  [1m[32mINSERT INTO "meals" ("user_id", "slot_id", "foodeaten", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 1], ["slot_id", 1], ["foodeaten", "hobo sandwich"], ["created_at", "2020-07-17 04:15:42.460856"], ["updated_at", "2020-07-17 04:15:42.460856"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mSlot Load (0.2ms)[0m  [1m[34mSELECT "slots".* FROM "slots" WHERE "slots"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMeal Create (0.4ms)[0m  [1m[32mINSERT INTO "meals" ("user_id", "slot_id", "foodeaten", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 2], ["slot_id", 1], ["foodeaten", "ommlette"], ["created_at", "2020-07-17 04:15:42.469607"], ["updated_at", "2020-07-17 04:15:42.469607"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mSlot Load (0.2ms)[0m  [1m[34mSELECT "slots".* FROM "slots" WHERE "slots"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMeal Create (0.4ms)[0m  [1m[32mINSERT INTO "meals" ("user_id", "slot_id", "foodeaten", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 3], ["slot_id", 1], ["foodeaten", "bagel and butter"], ["created_at", "2020-07-17 04:15:42.477046"], ["updated_at", "2020-07-17 04:15:42.477046"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSlot Load (0.3ms)[0m  [1m[34mSELECT "slots".* FROM "slots" WHERE "slots"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mMeal Create (0.4ms)[0m  [1m[32mINSERT INTO "meals" ("user_id", "slot_id", "foodeaten", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 1], ["slot_id", 2], ["foodeaten", "steak"], ["created_at", "2020-07-17 04:15:42.486546"], ["updated_at", "2020-07-17 04:15:42.486546"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mSlot Load (0.3ms)[0m  [1m[34mSELECT "slots".* FROM "slots" WHERE "slots"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mMeal Create (0.5ms)[0m  [1m[32mINSERT INTO "meals" ("user_id", "slot_id", "foodeaten", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 2], ["slot_id", 2], ["foodeaten", "beer pretzil"], ["created_at", "2020-07-17 04:15:42.503093"], ["updated_at", "2020-07-17 04:15:42.503093"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mSlot Load (0.2ms)[0m  [1m[34mSELECT "slots".* FROM "slots" WHERE "slots"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mMeal Create (0.4ms)[0m  [1m[32mINSERT INTO "meals" ("user_id", "slot_id", "foodeaten", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 3], ["slot_id", 2], ["foodeaten", "nuts"], ["created_at", "2020-07-17 04:15:42.511788"], ["updated_at", "2020-07-17 04:15:42.511788"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mSlot Load (0.2ms)[0m  [1m[34mSELECT "slots".* FROM "slots" WHERE "slots"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mMeal Create (0.3ms)[0m  [1m[32mINSERT INTO "meals" ("user_id", "slot_id", "foodeaten", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 1], ["slot_id", 3], ["foodeaten", "ham n cheese"], ["created_at", "2020-07-17 04:15:42.520265"], ["updated_at", "2020-07-17 04:15:42.520265"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mSlot Load (0.2ms)[0m  [1m[34mSELECT "slots".* FROM "slots" WHERE "slots"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mMeal Create (0.3ms)[0m  [1m[32mINSERT INTO "meals" ("user_id", "slot_id", "foodeaten", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 2], ["slot_id", 3], ["foodeaten", "sword fish"], ["created_at", "2020-07-17 04:15:42.527887"], ["updated_at", "2020-07-17 04:15:42.527887"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mSlot Load (0.2ms)[0m  [1m[34mSELECT "slots".* FROM "slots" WHERE "slots"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mMeal Create (0.3ms)[0m  [1m[32mINSERT INTO "meals" ("user_id", "slot_id", "foodeaten", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 3], ["slot_id", 3], ["foodeaten", "salmon"], ["created_at", "2020-07-17 04:15:42.535302"], ["updated_at", "2020-07-17 04:15:42.535302"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMeal Load (0.5ms)[0m  [1m[34mSELECT "meals".* FROM "meals" WHERE "meals"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 11]]
+Started GET "/slots/9/meals" for ::1 at 2020-07-17 00:27:06 -0400
+  [1m[35m (90.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MealsController#slotlookup as HTML
+  Parameters: {"slot_id"=>"9"}
+  [1m[36mSlot Load (102.3ms)[0m  [1m[34mSELECT "slots".* FROM "slots" WHERE "slots"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/meals_controller.rb:27:in `slotlookup'
+Completed 404 Not Found in 784ms (ActiveRecord: 423.8ms | Allocations: 2619)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Slot with 'id'=9):
+  
+app/controllers/meals_controller.rb:27:in `slotlookup'
+Started GET "/slots/9/meals" for ::1 at 2020-07-17 00:27:19 -0400
+Processing by MealsController#slotlookup as HTML
+  Parameters: {"slot_id"=>"9"}
+  [1m[36mSlot Load (0.9ms)[0m  [1m[34mSELECT "slots".* FROM "slots" WHERE "slots"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/meals_controller.rb:27:in `slotlookup'
+Completed 404 Not Found in 3ms (ActiveRecord: 0.9ms | Allocations: 668)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Slot with 'id'=9):
+  
+app/controllers/meals_controller.rb:27:in `slotlookup'
+Started GET "/slots/2/meals" for ::1 at 2020-07-17 00:27:53 -0400
+Processing by MealsController#slotlookup as HTML
+  Parameters: {"slot_id"=>"2"}
+  [1m[36mSlot Load (14.3ms)[0m  [1m[34mSELECT "slots".* FROM "slots" WHERE "slots"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/meals_controller.rb:27:in `slotlookup'
+  [1m[36mMeal Load (230.2ms)[0m  [1m[34mSELECT "meals".* FROM "meals" WHERE "meals"."slot_id" = $1[0m  [["slot_id", 2]]
+  ↳ app/controllers/meals_controller.rb:29:in `slotlookup'
+Completed 200 OK in 568ms (Views: 12.1ms | ActiveRecord: 248.3ms | Allocations: 9414)
+
+
+Started GET "/users" for ::1 at 2020-07-17 00:28:22 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (94.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  [1m[36mMeal Load (0.3ms)[0m  [1m[34mSELECT "meals".* FROM "meals" WHERE "meals"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  [1m[36mMeal Load (0.4ms)[0m  [1m[34mSELECT "meals".* FROM "meals" WHERE "meals"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  [1m[36mMeal Load (0.3ms)[0m  [1m[34mSELECT "meals".* FROM "meals" WHERE "meals"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+Completed 200 OK in 380ms (Views: 244.7ms | ActiveRecord: 97.8ms | Allocations: 12372)
+
+
+Started GET "/slots/2/meals" for ::1 at 2020-07-17 09:23:39 -0400
+Started GET "/slots/2/meals" for ::1 at 2020-07-17 09:23:39 -0400
+Started GET "/slots/2/meals" for ::1 at 2020-07-17 09:23:39 -0400
+  [1m[35m (101.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (103.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (240.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MealsController#slotlookup as HTML
+Processing by MealsController#slotlookup as HTML
+Processing by MealsController#slotlookup as HTML
+  Parameters: {"slot_id"=>"2"}
+  Parameters: {"slot_id"=>"2"}
+  Parameters: {"slot_id"=>"2"}
+  [1m[36mSlot Load (79.8ms)[0m  [1m[34mSELECT "slots".* FROM "slots" WHERE "slots"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mSlot Load (80.3ms)[0m  [1m[34mSELECT "slots".* FROM "slots" WHERE "slots"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/meals_controller.rb:27:in `slotlookup'
+  ↳ app/controllers/meals_controller.rb:27:in `slotlookup'
+  [1m[36mSlot Load (81.9ms)[0m  [1m[34mSELECT "slots".* FROM "slots" WHERE "slots"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/meals_controller.rb:27:in `slotlookup'
+  [1m[36mMeal Load (124.5ms)[0m  [1m[34mSELECT "meals".* FROM "meals" WHERE "meals"."slot_id" = $1[0m  [["slot_id", 2]]
+  ↳ app/controllers/meals_controller.rb:29:in `slotlookup'
+Completed 200 OK in 873ms (Views: 10.1ms | ActiveRecord: 474.5ms | Allocations: 11932)
+
+
+  [1m[36mMeal Load (140.2ms)[0m  [1m[34mSELECT "meals".* FROM "meals" WHERE "meals"."slot_id" = $1[0m  [["slot_id", 2]]
+  ↳ app/controllers/meals_controller.rb:29:in `slotlookup'
+Completed 200 OK in 663ms (Views: 2.9ms | ActiveRecord: 487.5ms | Allocations: 12466)
+
+
+  [1m[36mMeal Load (220.6ms)[0m  [1m[34mSELECT "meals".* FROM "meals" WHERE "meals"."slot_id" = $1[0m  [["slot_id", 2]]
+  ↳ app/controllers/meals_controller.rb:29:in `slotlookup'
+Completed 200 OK in 746ms (Views: 3.4ms | ActiveRecord: 566.1ms | Allocations: 14776)
+
+
+Started GET "/users/2/slots/2/meals" for ::1 at 2020-07-17 09:48:47 -0400
+Processing by MealsController#index as HTML
+  Parameters: {"user_id"=>"2", "slot_id"=>"2"}
+  [1m[36mUser Load (378.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/meals_controller.rb:3:in `index'
+  [1m[36mMeal Load (255.9ms)[0m  [1m[34mSELECT "meals".* FROM "meals" WHERE "meals"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/controllers/meals_controller.rb:5:in `index'
+Completed 200 OK in 5068ms (Views: 31.3ms | ActiveRecord: 4037.2ms | Allocations: 7693)
+
+
+Started GET "/users/:id/slots/meals" for ::1 at 2020-07-17 09:55:22 -0400
+  
+SyntaxError (/Users/robertskrzypczak/General_Assembly/sei/neptune/unit_4/week_3/project-4/Watd-ya-eat/watd_ya_eat/config/routes.rb:9: syntax error, unexpected local variable or method, expecting `end'
+... get 'users/:id/slots/meals' to: 'users#mealookup'
+...                             ^~
+):
+  
+config/routes.rb:9: syntax error, unexpected local variable or method, expecting `end'
+config/routes.rb:9: syntax error, unexpected local variable or method, expecting `end'
+Started GET "/users/:id/slots/meals" for ::1 at 2020-07-17 09:55:25 -0400
+Started GET "/users/1/slots/meals" for ::1 at 2020-07-17 09:55:28 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/users/1/slots/meals"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+  
+ActionController::RoutingError (No route matches [GET] "/users/:id/slots/meals"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/users/2/slots/2/meals" for ::1 at 2020-07-17 11:38:16 -0400
+Started GET "/users/2/slots/2/meals" for ::1 at 2020-07-17 11:38:16 -0400
+  [1m[35m (324.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MealsController#index as HTML
+  Parameters: {"user_id"=>"2", "slot_id"=>"2"}
+  [1m[35m (476.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MealsController#index as HTML
+  Parameters: {"user_id"=>"2", "slot_id"=>"2"}
+  [1m[36mUser Load (135.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (135.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/meals_controller.rb:3:in `index'
+  ↳ app/controllers/meals_controller.rb:3:in `index'
+  [1m[36mMeal Load (259.6ms)[0m  [1m[34mSELECT "meals".* FROM "meals" WHERE "meals"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/controllers/meals_controller.rb:5:in `index'
+Completed 200 OK in 1096ms (Views: 11.3ms | ActiveRecord: 709.4ms | Allocations: 10987)
+
+
+  [1m[36mMeal Load (300.0ms)[0m  [1m[34mSELECT "meals".* FROM "meals" WHERE "meals"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/controllers/meals_controller.rb:5:in `index'
+Completed 200 OK in 1425ms (Views: 4.9ms | ActiveRecord: 808.1ms | Allocations: 15137)
+
+
+Started GET "/users/2/slots/2/meals" for ::1 at 2020-07-17 11:40:38 -0400
+Processing by MealsController#index as HTML
+  Parameters: {"user_id"=>"2", "slot_id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/meals_controller.rb:3:in `index'
+  [1m[36mMeal Load (1.3ms)[0m  [1m[34mSELECT "meals".* FROM "meals" WHERE "meals"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/controllers/meals_controller.rb:5:in `index'
+Completed 200 OK in 7ms (Views: 3.0ms | ActiveRecord: 1.6ms | Allocations: 2097)
+
+
+Started GET "/users" for ::1 at 2020-07-17 11:42:44 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  [1m[36mMeal Load (0.5ms)[0m  [1m[34mSELECT "meals".* FROM "meals" WHERE "meals"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  [1m[36mMeal Load (0.5ms)[0m  [1m[34mSELECT "meals".* FROM "meals" WHERE "meals"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  [1m[36mMeal Load (0.5ms)[0m  [1m[34mSELECT "meals".* FROM "meals" WHERE "meals"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+Completed 200 OK in 426ms (Views: 423.3ms | ActiveRecord: 1.8ms | Allocations: 8185)
+
+
+Started GET "/users/2/slots/2/meals" for ::1 at 2020-07-17 11:42:48 -0400
+Processing by MealsController#index as HTML
+  Parameters: {"user_id"=>"2", "slot_id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/meals_controller.rb:3:in `index'
+  [1m[36mMeal Load (1.2ms)[0m  [1m[34mSELECT "meals".* FROM "meals" WHERE "meals"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/controllers/meals_controller.rb:5:in `index'
+Completed 200 OK in 8ms (Views: 5.0ms | ActiveRecord: 1.6ms | Allocations: 2097)
+
+
+Started GET "/users/2/slots/2/meals" for ::1 at 2020-07-17 11:43:23 -0400
+Processing by MealsController#index as HTML
+  Parameters: {"user_id"=>"2", "slot_id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/meals_controller.rb:3:in `index'
+  [1m[36mMeal Load (17.5ms)[0m  [1m[34mSELECT "meals".* FROM "meals" WHERE "meals"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/controllers/meals_controller.rb:5:in `index'
+Completed 200 OK in 22ms (Views: 2.6ms | ActiveRecord: 17.9ms | Allocations: 2078)
+
+
+Started GET "/users/2/slots/2/meals" for ::1 at 2020-07-17 11:45:38 -0400
+  
+SyntaxError (/Users/robertskrzypczak/General_Assembly/sei/neptune/unit_4/week_3/project-4/Watd-ya-eat/watd_ya_eat/config/routes.rb:9: syntax error, unexpected local variable or method, expecting `end'
+  get 'users' to: 'users#mealookup'
+              ^~
+):
+  
+config/routes.rb:9: syntax error, unexpected local variable or method, expecting `end'
+config/routes.rb:9: syntax error, unexpected local variable or method, expecting `end'
+Started GET "/users/2/slots/2/meals" for ::1 at 2020-07-17 11:45:40 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/users/2/slots/2/meals"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/users/2/slots/2/meals" for ::1 at 2020-07-17 11:46:11 -0400
+Processing by MealsController#index as HTML
+  Parameters: {"user_id"=>"2", "slot_id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/meals_controller.rb:3:in `index'
+  [1m[36mMeal Load (0.2ms)[0m  [1m[34mSELECT "meals".* FROM "meals" WHERE "meals"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/controllers/meals_controller.rb:5:in `index'
+Completed 200 OK in 151ms (Views: 9.0ms | ActiveRecord: 6.9ms | Allocations: 10326)
+
+
+Started GET "/users/2/slots/2/meals" for ::1 at 2020-07-17 11:46:18 -0400
+Processing by MealsController#index as HTML
+  Parameters: {"user_id"=>"2", "slot_id"=>"2"}
+  [1m[36mUser Load (6.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/meals_controller.rb:3:in `index'
+  [1m[36mMeal Load (0.7ms)[0m  [1m[34mSELECT "meals".* FROM "meals" WHERE "meals"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/controllers/meals_controller.rb:5:in `index'
+Completed 200 OK in 12ms (Views: 3.4ms | ActiveRecord: 6.8ms | Allocations: 2078)
+
+
+Started GET "/users/2/slots/2/meals" for ::1 at 2020-07-17 11:46:20 -0400
+Processing by MealsController#index as HTML
+  Parameters: {"user_id"=>"2", "slot_id"=>"2"}
+  [1m[36mUser Load (8.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/meals_controller.rb:3:in `index'
+  [1m[36mMeal Load (2.1ms)[0m  [1m[34mSELECT "meals".* FROM "meals" WHERE "meals"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/controllers/meals_controller.rb:5:in `index'
+Completed 200 OK in 17ms (Views: 4.0ms | ActiveRecord: 10.9ms | Allocations: 2078)
+
+
+Started GET "/users/2/slots/2/meals" for ::1 at 2020-07-17 11:59:19 -0400
+Processing by MealsController#index as HTML
+  Parameters: {"user_id"=>"2", "slot_id"=>"2"}
+  [1m[36mUser Load (68.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/meals_controller.rb:3:in `index'
+  [1m[36mMeal Load (42.2ms)[0m  [1m[34mSELECT "meals".* FROM "meals" WHERE "meals"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/controllers/meals_controller.rb:5:in `index'
+Completed 200 OK in 273ms (Views: 10.9ms | ActiveRecord: 110.8ms | Allocations: 9821)
+
+
+Started GET "/users/2/slots/2/meals" for ::1 at 2020-07-17 12:00:01 -0400
+Processing by MealsController#index as HTML
+  Parameters: {"user_id"=>"2", "slot_id"=>"2"}
+  [1m[36mUser Load (4.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/meals_controller.rb:3:in `index'
+  [1m[36mMeal Load (5.8ms)[0m  [1m[34mSELECT "meals".* FROM "meals" WHERE "meals"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/controllers/meals_controller.rb:5:in `index'
+Completed 200 OK in 16ms (Views: 3.3ms | ActiveRecord: 10.1ms | Allocations: 2078)
+
+
+Started GET "/users/2/slots/2/meals" for ::1 at 2020-07-17 12:01:52 -0400
+Processing by MealsController#index as HTML
+  Parameters: {"user_id"=>"2", "slot_id"=>"2"}
+  [1m[36mUser Load (7.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/meals_controller.rb:3:in `index'
+  [1m[36mMeal Load (0.6ms)[0m  [1m[34mSELECT "meals".* FROM "meals" WHERE "meals"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/controllers/meals_controller.rb:5:in `index'
+Completed 200 OK in 12ms (Views: 2.9ms | ActiveRecord: 7.9ms | Allocations: 2078)
+
+
+Started GET "/users/2/slots/2/meals" for ::1 at 2020-07-17 12:02:52 -0400
+Processing by MealsController#index as HTML
+  Parameters: {"user_id"=>"2", "slot_id"=>"2"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/meals_controller.rb:3:in `index'
+  [1m[36mMeal Load (0.6ms)[0m  [1m[34mSELECT "meals".* FROM "meals" WHERE "meals"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/controllers/meals_controller.rb:5:in `index'
+Completed 200 OK in 7ms (Views: 3.5ms | ActiveRecord: 1.2ms | Allocations: 2078)
+
+
+Started GET "/users/2/slots/2/meals" for ::1 at 2020-07-17 12:02:56 -0400
+Processing by MealsController#index as HTML
+  Parameters: {"user_id"=>"2", "slot_id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/meals_controller.rb:3:in `index'
+  [1m[36mMeal Load (0.5ms)[0m  [1m[34mSELECT "meals".* FROM "meals" WHERE "meals"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/controllers/meals_controller.rb:5:in `index'
+Completed 200 OK in 6ms (Views: 3.1ms | ActiveRecord: 0.8ms | Allocations: 2078)
+
+
+Started GET "/users/2/slots/2/meals" for ::1 at 2020-07-17 12:02:59 -0400
+Processing by MealsController#index as HTML
+  Parameters: {"user_id"=>"2", "slot_id"=>"2"}
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/meals_controller.rb:3:in `index'
+  [1m[36mMeal Load (10.9ms)[0m  [1m[34mSELECT "meals".* FROM "meals" WHERE "meals"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/controllers/meals_controller.rb:5:in `index'
+Completed 200 OK in 19ms (Views: 4.1ms | ActiveRecord: 13.0ms | Allocations: 2078)
+
+
+Started GET "/users/2/slots/2/meals" for ::1 at 2020-07-17 12:03:03 -0400
+Processing by MealsController#index as HTML
+  Parameters: {"user_id"=>"2", "slot_id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/meals_controller.rb:3:in `index'
+  [1m[36mMeal Load (0.2ms)[0m  [1m[34mSELECT "meals".* FROM "meals" WHERE "meals"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/controllers/meals_controller.rb:5:in `index'
+Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 0.6ms | Allocations: 2078)
+
+
+Started GET "/users/2/slots/2/meals" for ::1 at 2020-07-17 12:03:36 -0400
+Processing by MealsController#index as HTML
+  Parameters: {"user_id"=>"2", "slot_id"=>"2"}
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/meals_controller.rb:3:in `index'
+  [1m[36mMeal Load (2.1ms)[0m  [1m[34mSELECT "meals".* FROM "meals" WHERE "meals"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/controllers/meals_controller.rb:5:in `index'
+Completed 200 OK in 12ms (Views: 3.9ms | ActiveRecord: 6.4ms | Allocations: 2078)
+
+
+Started GET "/users/2/slots/2/meals" for ::1 at 2020-07-17 12:23:50 -0400
+Processing by MealsController#index as HTML
+  Parameters: {"user_id"=>"2", "slot_id"=>"2"}
+  [1m[36mUser Load (11.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/meals_controller.rb:3:in `index'
+  [1m[36mMeal Load (41.4ms)[0m  [1m[34mSELECT "meals".* FROM "meals" WHERE "meals"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/controllers/meals_controller.rb:5:in `index'
+Completed 200 OK in 60ms (Views: 4.6ms | ActiveRecord: 53.1ms | Allocations: 2183)
+
+
