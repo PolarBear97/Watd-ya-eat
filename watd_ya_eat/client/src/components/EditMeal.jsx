@@ -4,32 +4,27 @@ export default class EditMeal extends Component {
   state = {
     foodeaten: ''
   }
-
   componentDidMount() {
     if (this.props.mealItem) {
       this.setFormData();
     }
   }
-
   componentDidUpdate(prevProps) {
     if (prevProps.mealItem !== this.props.mealItem) {
       this.setFormData();
     }
   }
-
   setFormData = () => {
     this.setState({
       foodeaten: this.props.mealItem.foodeaten
     })
   }
-
   handleChange = (e) => {
     const { value } = e.target;
     this.setState({
       foodeaten: value
     })
   }
-
   render() {
     const { handleMealUpdate, history, id } = this.props;
     return (

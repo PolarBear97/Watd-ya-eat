@@ -1,6 +1,5 @@
 import Axios from 'axios'
 
-
 let apiUrl
 
 const apiUrls = {

@@ -42,7 +42,7 @@ class MealsController < ApplicationController
     @meal.update(meal_params)
     render json: @meal
   end
-  
+
   def destroy
     @meal = Meal.find(params[:id])
     @meal.destroy

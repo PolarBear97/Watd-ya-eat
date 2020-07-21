@@ -11,8 +11,7 @@ import Nav from './components/Nav'
 import Create from './components/Create'
 import LogoutBtn from './components/LogoutBtn'
 import EditMeal from './components/EditMeal'
-
-
+import SocialMedia from './components/SocialMedia'
 
 class App extends Component {
   state = {
@@ -35,6 +34,9 @@ class App extends Component {
       slots
     })
   }
+  // componentDidUpdate = () => {
+
+  // }
   handleChange = (e) => {
     const { name, value } = e.target;
     this.setState(prevState => ({
@@ -44,6 +46,7 @@ class App extends Component {
       }
     }))
   }
+
   handleLogout = () => {
     this.setState({
       currentUser: null
@@ -58,6 +61,7 @@ class App extends Component {
     this.setState({
       currentUser
     })
+
   }
 
   handleRegister = async (e) => {
@@ -82,10 +86,6 @@ class App extends Component {
     }))
     this.props.history.push('/')
   }
-
-  // removeFood = async (id) => {
-  //   const deleted = await removeMeal(id)
-  // }
 
   handleMealDelete = async (id) => {
     await removeMeal(id);
@@ -120,22 +120,23 @@ class App extends Component {
           </Route>
         </div>
         <Route exact path='/'>
+          <div id="space">
+            {this.state.meals && this.state.meals.map(meal => (
+              <div class='meal'>
+                <Link to={`/meals/${meal.id}`}>
+                  <h2>{meal.foodeaten}</h2>
+                  <h3>Date: {meal.created_at}</h3>
 
-          {this.state.meals && this.state.meals.map(meal => (
-            <div class='meal'>
-              <Link to={`/meals/${meal.id}`}>
-                <h2>{meal.foodeaten}</h2>
-                <h3>Date: {meal.created_at}</h3>
+                </Link>
+                {/* <button onClick={() => this.handleMealUpdate(meal.id)}>Edit</button> */}
+                <Link to={`/meals/${meal.id}/edit`}>
+                  <button>Edit</button>
 
-              </Link>
-              {/* <button onClick={() => this.handleMealUpdate(meal.id)}>Edit</button> */}
-              <Link to={`/meals/${meal.id}/edit`}>
-                <button>Edit</button>
-
-              </Link>
-              <button onClick={() => this.handleMealDelete(meal.id)}>Remove</button>
-            </div>
-          ))}
+                </Link>
+                <button onClick={() => this.handleMealDelete(meal.id)}>Remove</button>
+              </div>
+            ))}
+          </div>
           <div id="space"></div>
 
           <div id="create">
@@ -156,8 +157,11 @@ class App extends Component {
           />
         }} />
 
-        <div id="footer">
-          {/* <Footer /> */}
+        <div id="space">
+          <SocialMedia />
+        </div>
+        <div id="space">
+          <Footer />
         </div>
 
       </>

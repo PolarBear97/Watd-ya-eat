@@ -3,7 +3,6 @@ import { getMeals, addMeal } from '../services/apihelper'
 import {withRouter} from 'react-router-dom'
 
 export default class Meals extends Component {
-
   state = {
     meals: null,
     addMeal: false,
@@ -13,7 +12,6 @@ export default class Meals extends Component {
       slot_id: null
     }
   }
-
   componentDidMount = async () => {
     const id = this.props.match.params.id
     const meals = await getMeals(id)
@@ -21,13 +19,11 @@ export default class Meals extends Component {
       meals
     })
   }
-
   toggleAdd = () => {
     this.setState(prevState => ({
       addMeal: !prevState.addMeal
     }))
   }
-
   handleChange = (e) => {
     const { name, value } = e.target
     this.setState(prevState => ({
@@ -37,7 +33,6 @@ export default class Meals extends Component {
       }
     }))
   }
-
   handleAdd = async (e) => {
     e.preventDefault();
     const newMeal = await addMeal(this.props.match.params.id, this.state.meal)
@@ -45,7 +40,6 @@ export default class Meals extends Component {
       meals: [...prevState.meals, newMeal]
     }))
   }
-
   render() {
     return (
       <>
