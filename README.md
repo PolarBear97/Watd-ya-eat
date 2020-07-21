@@ -63,7 +63,7 @@ I expect the most trouble with the login authentication system and the create an
 
 [Desktop](https://app.lucidchart.com/documents/edit/3b8076ef-8af0-49fc-a4a2-4a0cfd8d90ec/0_0?shared=true)
 
-[Tablet]
+[Tablet](https://app.lucidchart.com/invitations/accept/28a0fa1b-d2ab-49c7-92ad-ff0ea39688f4/0_0?shared=true)
 
 [Mobile](https://app.lucidchart.com/invitations/accept/830b65b0-5009-46aa-964a-c1d04f276f01/0_0?shared=true)
 
