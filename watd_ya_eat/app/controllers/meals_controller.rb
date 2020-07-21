@@ -42,14 +42,6 @@ class MealsController < ApplicationController
     @meal.update(meal_params)
     render json: @meal
   end
-
-  # def update
-  #   if @meal.update(meal_params)
-  #     render json: @meal
-  #   else
-  #     render json: @meal.errors, status: :unprocessable_entity
-  #   end
-  # end
   
   def destroy
     @meal = Meal.find(params[:id])

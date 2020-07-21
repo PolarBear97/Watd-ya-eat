@@ -17892,3 +17892,372 @@ Processing by MealsController#update as HTML
 Completed 200 OK in 58ms (Views: 0.5ms | ActiveRecord: 44.0ms | Allocations: 6035)
 
 
+Started GET "/auth/verify" for ::1 at 2020-07-21 13:12:29 -0400
+Started POST "/auth/login" for ::1 at 2020-07-21 13:12:31 -0400
+  [1m[35m (190.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AuthenticationController#verify as HTML
+  [1m[35m (191.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"keanu7reeves", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 353ms (Views: 0.6ms | ActiveRecord: 101.3ms | Allocations: 7690)
+
+
+  [1m[36mUser Load (60.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "keanu7reeves"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 200 OK in 386ms (Views: 0.3ms | ActiveRecord: 62.8ms | Allocations: 6501)
+
+
+Started GET "/users/5/slots/2/meals" for ::1 at 2020-07-21 13:12:33 -0400
+Processing by MealsController#index as HTML
+  Parameters: {"user_id"=>"5", "slot_id"=>"2"}
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/meals_controller.rb:4:in `index'
+  [1m[36mMeal Load (0.6ms)[0m  [1m[34mSELECT "meals".* FROM "meals" WHERE "meals"."user_id" = $1[0m  [["user_id", 5]]
+  ↳ app/controllers/meals_controller.rb:6:in `index'
+Completed 200 OK in 240ms (Views: 9.8ms | ActiveRecord: 7.3ms | Allocations: 5868)
+
+
+Started GET "/users/1/slots" for ::1 at 2020-07-21 13:12:33 -0400
+Processing by SlotsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mSlot Load (40.6ms)[0m  [1m[34mSELECT "slots".* FROM "slots"[0m
+  ↳ app/controllers/slots_controller.rb:4:in `index'
+  [1m[36mMeal Load (0.3ms)[0m  [1m[34mSELECT "meals".* FROM "meals" WHERE "meals"."slot_id" = $1[0m  [["slot_id", 9]]
+  ↳ app/controllers/slots_controller.rb:4:in `index'
+  [1m[36mMeal Load (0.4ms)[0m  [1m[34mSELECT "meals".* FROM "meals" WHERE "meals"."slot_id" = $1[0m  [["slot_id", 10]]
+  ↳ app/controllers/slots_controller.rb:4:in `index'
+  [1m[36mMeal Load (0.2ms)[0m  [1m[34mSELECT "meals".* FROM "meals" WHERE "meals"."slot_id" = $1[0m  [["slot_id", 11]]
+  ↳ app/controllers/slots_controller.rb:4:in `index'
+  [1m[36mMeal Load (0.3ms)[0m  [1m[34mSELECT "meals".* FROM "meals" WHERE "meals"."slot_id" = $1[0m  [["slot_id", 12]]
+  ↳ app/controllers/slots_controller.rb:4:in `index'
+Completed 200 OK in 335ms (Views: 252.6ms | ActiveRecord: 44.7ms | Allocations: 10979)
+
+
+Started PUT "/users/5/slots/12/meals/27" for ::1 at 2020-07-21 13:12:43 -0400
+Processing by MealsController#update as HTML
+  Parameters: {"meal"=>{"foodeaten"=>"snails"}, "user_id"=>"5", "slot_id"=>"12", "id"=>"27"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  [1m[36mMeal Load (0.3ms)[0m  [1m[34mSELECT "meals".* FROM "meals" WHERE "meals"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ app/controllers/meals_controller.rb:41:in `update'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/meals_controller.rb:42:in `update'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/meals_controller.rb:42:in `update'
+  [1m[36mSlot Load (0.2ms)[0m  [1m[34mSELECT "slots".* FROM "slots" WHERE "slots"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/meals_controller.rb:42:in `update'
+  [1m[36mMeal Update (0.5ms)[0m  [1m[33mUPDATE "meals" SET "foodeaten" = $1, "updated_at" = $2 WHERE "meals"."id" = $3[0m  [["foodeaten", "snails"], ["updated_at", "2020-07-21 17:12:43.541884"], ["id", 27]]
+  ↳ app/controllers/meals_controller.rb:42:in `update'
+  [1m[35m (114.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/meals_controller.rb:42:in `update'
+Completed 200 OK in 130ms (Views: 0.4ms | ActiveRecord: 116.3ms | Allocations: 6771)
+
+
+Started POST "/users/2/slots/11/meals" for ::1 at 2020-07-21 13:12:55 -0400
+Processing by MealsController#create as HTML
+  Parameters: {"meal"=>{"foodeaten"=>"chicken"}, "user_id"=>"2", "slot_id"=>"11"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  [1m[36mSlot Load (0.2ms)[0m  [1m[34mSELECT "slots".* FROM "slots" WHERE "slots"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/meals_controller.rb:18:in `create'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/meals_controller.rb:20:in `create'
+  [1m[36mSlot Load (0.2ms)[0m  [1m[34mSELECT "slots".* FROM "slots" WHERE "slots"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/meals_controller.rb:20:in `create'
+  [1m[36mMeal Create (0.8ms)[0m  [1m[32mINSERT INTO "meals" ("user_id", "slot_id", "foodeaten", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 5], ["slot_id", 11], ["foodeaten", "chicken"], ["created_at", "2020-07-21 17:12:55.045510"], ["updated_at", "2020-07-21 17:12:55.045510"]]
+  ↳ app/controllers/meals_controller.rb:20:in `create'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/meals_controller.rb:20:in `create'
+Completed 201 Created in 10ms (Views: 0.3ms | ActiveRecord: 2.1ms | Allocations: 5101)
+
+
+Started POST "/auth/login" for ::1 at 2020-07-21 13:13:26 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"polarbearpete7", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "polarbearpete7"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 200 OK in 301ms (Views: 0.4ms | ActiveRecord: 0.9ms | Allocations: 1001)
+
+
+Started GET "/auth/verify" for ::1 at 2020-07-21 13:13:42 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.6ms | Allocations: 849)
+
+
+Started GET "/users/4/slots/2/meals" for ::1 at 2020-07-21 13:13:42 -0400
+Processing by MealsController#index as HTML
+  Parameters: {"user_id"=>"4", "slot_id"=>"2"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/meals_controller.rb:4:in `index'
+  [1m[36mMeal Load (2.1ms)[0m  [1m[34mSELECT "meals".* FROM "meals" WHERE "meals"."user_id" = $1[0m  [["user_id", 4]]
+  ↳ app/controllers/meals_controller.rb:6:in `index'
+Completed 200 OK in 8ms (Views: 3.5ms | ActiveRecord: 2.5ms | Allocations: 1872)
+
+
+Started GET "/users/1/slots" for ::1 at 2020-07-21 13:13:42 -0400
+Processing by SlotsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mSlot Load (0.5ms)[0m  [1m[34mSELECT "slots".* FROM "slots"[0m
+  ↳ app/controllers/slots_controller.rb:4:in `index'
+  [1m[36mMeal Load (0.5ms)[0m  [1m[34mSELECT "meals".* FROM "meals" WHERE "meals"."slot_id" = $1[0m  [["slot_id", 9]]
+  ↳ app/controllers/slots_controller.rb:4:in `index'
+  [1m[36mMeal Load (0.3ms)[0m  [1m[34mSELECT "meals".* FROM "meals" WHERE "meals"."slot_id" = $1[0m  [["slot_id", 10]]
+  ↳ app/controllers/slots_controller.rb:4:in `index'
+  [1m[36mMeal Load (0.2ms)[0m  [1m[34mSELECT "meals".* FROM "meals" WHERE "meals"."slot_id" = $1[0m  [["slot_id", 11]]
+  ↳ app/controllers/slots_controller.rb:4:in `index'
+  [1m[36mMeal Load (0.2ms)[0m  [1m[34mSELECT "meals".* FROM "meals" WHERE "meals"."slot_id" = $1[0m  [["slot_id", 12]]
+  ↳ app/controllers/slots_controller.rb:4:in `index'
+Completed 200 OK in 15ms (Views: 12.9ms | ActiveRecord: 1.8ms | Allocations: 6356)
+
+
+Started GET "/auth/verify" for ::1 at 2020-07-21 13:14:26 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.4ms | Allocations: 849)
+
+
+Started GET "/users/4/slots/2/meals" for ::1 at 2020-07-21 13:14:26 -0400
+Processing by MealsController#index as HTML
+  Parameters: {"user_id"=>"4", "slot_id"=>"2"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/meals_controller.rb:4:in `index'
+  [1m[36mMeal Load (0.5ms)[0m  [1m[34mSELECT "meals".* FROM "meals" WHERE "meals"."user_id" = $1[0m  [["user_id", 4]]
+  ↳ app/controllers/meals_controller.rb:6:in `index'
+Completed 200 OK in 11ms (Views: 4.4ms | ActiveRecord: 2.2ms | Allocations: 1872)
+
+
+Started GET "/users/1/slots" for ::1 at 2020-07-21 13:14:26 -0400
+Processing by SlotsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mSlot Load (0.4ms)[0m  [1m[34mSELECT "slots".* FROM "slots"[0m
+  ↳ app/controllers/slots_controller.rb:4:in `index'
+  [1m[36mMeal Load (0.9ms)[0m  [1m[34mSELECT "meals".* FROM "meals" WHERE "meals"."slot_id" = $1[0m  [["slot_id", 9]]
+  ↳ app/controllers/slots_controller.rb:4:in `index'
+  [1m[36mMeal Load (6.3ms)[0m  [1m[34mSELECT "meals".* FROM "meals" WHERE "meals"."slot_id" = $1[0m  [["slot_id", 10]]
+  ↳ app/controllers/slots_controller.rb:4:in `index'
+  [1m[36mMeal Load (4.1ms)[0m  [1m[34mSELECT "meals".* FROM "meals" WHERE "meals"."slot_id" = $1[0m  [["slot_id", 11]]
+  ↳ app/controllers/slots_controller.rb:4:in `index'
+  [1m[36mMeal Load (0.5ms)[0m  [1m[34mSELECT "meals".* FROM "meals" WHERE "meals"."slot_id" = $1[0m  [["slot_id", 12]]
+  ↳ app/controllers/slots_controller.rb:4:in `index'
+Completed 200 OK in 31ms (Views: 18.3ms | ActiveRecord: 12.2ms | Allocations: 6355)
+
+
+Started PUT "/users/5/slots/12/meals/20" for ::1 at 2020-07-21 13:14:43 -0400
+Processing by MealsController#update as HTML
+  Parameters: {"meal"=>{"foodeaten"=>"bacon bagel"}, "user_id"=>"5", "slot_id"=>"12", "id"=>"20"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  [1m[36mMeal Load (0.3ms)[0m  [1m[34mSELECT "meals".* FROM "meals" WHERE "meals"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/meals_controller.rb:41:in `update'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/meals_controller.rb:42:in `update'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/meals_controller.rb:42:in `update'
+  [1m[36mSlot Load (0.2ms)[0m  [1m[34mSELECT "slots".* FROM "slots" WHERE "slots"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/meals_controller.rb:42:in `update'
+  [1m[36mMeal Update (0.3ms)[0m  [1m[33mUPDATE "meals" SET "foodeaten" = $1, "updated_at" = $2 WHERE "meals"."id" = $3[0m  [["foodeaten", "bacon bagel"], ["updated_at", "2020-07-21 17:14:43.420693"], ["id", 20]]
+  ↳ app/controllers/meals_controller.rb:42:in `update'
+  [1m[35m (39.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/meals_controller.rb:42:in `update'
+Completed 200 OK in 50ms (Views: 0.4ms | ActiveRecord: 40.8ms | Allocations: 6037)
+
+
+Started GET "/auth/verify" for ::1 at 2020-07-21 13:17:07 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 849)
+
+
+Started GET "/users/4/slots/2/meals" for ::1 at 2020-07-21 13:17:07 -0400
+Processing by MealsController#index as HTML
+  Parameters: {"user_id"=>"4", "slot_id"=>"2"}
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/meals_controller.rb:4:in `index'
+  [1m[36mMeal Load (0.4ms)[0m  [1m[34mSELECT "meals".* FROM "meals" WHERE "meals"."user_id" = $1[0m  [["user_id", 4]]
+  ↳ app/controllers/meals_controller.rb:6:in `index'
+Completed 200 OK in 9ms (Views: 2.4ms | ActiveRecord: 3.9ms | Allocations: 1872)
+
+
+Started GET "/users/1/slots" for ::1 at 2020-07-21 13:17:07 -0400
+Processing by SlotsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mSlot Load (0.4ms)[0m  [1m[34mSELECT "slots".* FROM "slots"[0m
+  ↳ app/controllers/slots_controller.rb:4:in `index'
+  [1m[36mMeal Load (0.2ms)[0m  [1m[34mSELECT "meals".* FROM "meals" WHERE "meals"."slot_id" = $1[0m  [["slot_id", 9]]
+  ↳ app/controllers/slots_controller.rb:4:in `index'
+  [1m[36mMeal Load (0.2ms)[0m  [1m[34mSELECT "meals".* FROM "meals" WHERE "meals"."slot_id" = $1[0m  [["slot_id", 10]]
+  ↳ app/controllers/slots_controller.rb:4:in `index'
+  [1m[36mMeal Load (0.3ms)[0m  [1m[34mSELECT "meals".* FROM "meals" WHERE "meals"."slot_id" = $1[0m  [["slot_id", 11]]
+  ↳ app/controllers/slots_controller.rb:4:in `index'
+  [1m[36mMeal Load (0.3ms)[0m  [1m[34mSELECT "meals".* FROM "meals" WHERE "meals"."slot_id" = $1[0m  [["slot_id", 12]]
+  ↳ app/controllers/slots_controller.rb:4:in `index'
+Completed 200 OK in 14ms (Views: 12.4ms | ActiveRecord: 1.4ms | Allocations: 6355)
+
+
+Started DELETE "/users/2/slots/2/meals/26" for ::1 at 2020-07-21 13:18:06 -0400
+Processing by MealsController#destroy as HTML
+  Parameters: {"user_id"=>"2", "slot_id"=>"2", "id"=>"26"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  [1m[36mMeal Load (0.3ms)[0m  [1m[34mSELECT "meals".* FROM "meals" WHERE "meals"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/meals_controller.rb:55:in `destroy'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/meals_controller.rb:56:in `destroy'
+  [1m[36mMeal Destroy (0.3ms)[0m  [1m[31mDELETE FROM "meals" WHERE "meals"."id" = $1[0m  [["id", 26]]
+  ↳ app/controllers/meals_controller.rb:56:in `destroy'
+  [1m[35m (66.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/meals_controller.rb:56:in `destroy'
+Completed 200 OK in 74ms (Views: 0.4ms | ActiveRecord: 67.4ms | Allocations: 3219)
+
+
+Started POST "/users/2/slots/10/meals" for ::1 at 2020-07-21 13:18:16 -0400
+Processing by MealsController#create as HTML
+  Parameters: {"meal"=>{"foodeaten"=>"chicken"}, "user_id"=>"2", "slot_id"=>"10"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  [1m[36mSlot Load (0.2ms)[0m  [1m[34mSELECT "slots".* FROM "slots" WHERE "slots"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/meals_controller.rb:18:in `create'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/meals_controller.rb:20:in `create'
+  [1m[36mSlot Load (0.2ms)[0m  [1m[34mSELECT "slots".* FROM "slots" WHERE "slots"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/meals_controller.rb:20:in `create'
+  [1m[36mMeal Create (0.5ms)[0m  [1m[32mINSERT INTO "meals" ("user_id", "slot_id", "foodeaten", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 4], ["slot_id", 10], ["foodeaten", "chicken"], ["created_at", "2020-07-21 17:18:16.271920"], ["updated_at", "2020-07-21 17:18:16.271920"]]
+  ↳ app/controllers/meals_controller.rb:20:in `create'
+  [1m[35m (85.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/meals_controller.rb:20:in `create'
+Completed 201 Created in 96ms (Views: 0.5ms | ActiveRecord: 86.8ms | Allocations: 4926)
+
+
+Started GET "/auth/verify" for ::1 at 2020-07-21 13:19:41 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (6.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 9ms (Views: 0.6ms | ActiveRecord: 6.3ms | Allocations: 849)
+
+
+Started GET "/users/4/slots/2/meals" for ::1 at 2020-07-21 13:19:42 -0400
+Processing by MealsController#index as HTML
+  Parameters: {"user_id"=>"4", "slot_id"=>"2"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/meals_controller.rb:4:in `index'
+  [1m[36mMeal Load (0.4ms)[0m  [1m[34mSELECT "meals".* FROM "meals" WHERE "meals"."user_id" = $1[0m  [["user_id", 4]]
+  ↳ app/controllers/meals_controller.rb:6:in `index'
+Completed 200 OK in 5ms (Views: 2.0ms | ActiveRecord: 0.9ms | Allocations: 1873)
+
+
+Started GET "/users/1/slots" for ::1 at 2020-07-21 13:19:42 -0400
+Processing by SlotsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mSlot Load (0.4ms)[0m  [1m[34mSELECT "slots".* FROM "slots"[0m
+  ↳ app/controllers/slots_controller.rb:4:in `index'
+  [1m[36mMeal Load (0.8ms)[0m  [1m[34mSELECT "meals".* FROM "meals" WHERE "meals"."slot_id" = $1[0m  [["slot_id", 9]]
+  ↳ app/controllers/slots_controller.rb:4:in `index'
+  [1m[36mMeal Load (0.2ms)[0m  [1m[34mSELECT "meals".* FROM "meals" WHERE "meals"."slot_id" = $1[0m  [["slot_id", 10]]
+  ↳ app/controllers/slots_controller.rb:4:in `index'
+  [1m[36mMeal Load (0.3ms)[0m  [1m[34mSELECT "meals".* FROM "meals" WHERE "meals"."slot_id" = $1[0m  [["slot_id", 11]]
+  ↳ app/controllers/slots_controller.rb:4:in `index'
+  [1m[36mMeal Load (0.2ms)[0m  [1m[34mSELECT "meals".* FROM "meals" WHERE "meals"."slot_id" = $1[0m  [["slot_id", 12]]
+  ↳ app/controllers/slots_controller.rb:4:in `index'
+Completed 200 OK in 14ms (Views: 12.2ms | ActiveRecord: 2.0ms | Allocations: 6355)
+
+
+Started GET "/auth/verify" for ::1 at 2020-07-21 13:19:49 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 849)
+
+
+Started GET "/users/4/slots/2/meals" for ::1 at 2020-07-21 13:19:49 -0400
+Processing by MealsController#index as HTML
+  Parameters: {"user_id"=>"4", "slot_id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/meals_controller.rb:4:in `index'
+  [1m[36mMeal Load (0.3ms)[0m  [1m[34mSELECT "meals".* FROM "meals" WHERE "meals"."user_id" = $1[0m  [["user_id", 4]]
+  ↳ app/controllers/meals_controller.rb:6:in `index'
+Completed 200 OK in 4ms (Views: 2.0ms | ActiveRecord: 0.5ms | Allocations: 1872)
+
+
+Started GET "/users/1/slots" for ::1 at 2020-07-21 13:19:49 -0400
+Processing by SlotsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mSlot Load (0.5ms)[0m  [1m[34mSELECT "slots".* FROM "slots"[0m
+  ↳ app/controllers/slots_controller.rb:4:in `index'
+  [1m[36mMeal Load (0.2ms)[0m  [1m[34mSELECT "meals".* FROM "meals" WHERE "meals"."slot_id" = $1[0m  [["slot_id", 9]]
+  ↳ app/controllers/slots_controller.rb:4:in `index'
+  [1m[36mMeal Load (0.2ms)[0m  [1m[34mSELECT "meals".* FROM "meals" WHERE "meals"."slot_id" = $1[0m  [["slot_id", 10]]
+  ↳ app/controllers/slots_controller.rb:4:in `index'
+  [1m[36mMeal Load (0.2ms)[0m  [1m[34mSELECT "meals".* FROM "meals" WHERE "meals"."slot_id" = $1[0m  [["slot_id", 11]]
+  ↳ app/controllers/slots_controller.rb:4:in `index'
+  [1m[36mMeal Load (0.3ms)[0m  [1m[34mSELECT "meals".* FROM "meals" WHERE "meals"."slot_id" = $1[0m  [["slot_id", 12]]
+  ↳ app/controllers/slots_controller.rb:4:in `index'
+Completed 200 OK in 16ms (Views: 14.3ms | ActiveRecord: 1.5ms | Allocations: 6355)
+
+
+Started PUT "/users/5/slots/12/meals/37" for ::1 at 2020-07-21 13:20:04 -0400
+Processing by MealsController#update as HTML
+  Parameters: {"meal"=>{"foodeaten"=>"chicken w cheese"}, "user_id"=>"5", "slot_id"=>"12", "id"=>"37"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  [1m[36mMeal Load (0.3ms)[0m  [1m[34mSELECT "meals".* FROM "meals" WHERE "meals"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+  ↳ app/controllers/meals_controller.rb:41:in `update'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/meals_controller.rb:42:in `update'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/meals_controller.rb:42:in `update'
+  [1m[36mSlot Load (0.3ms)[0m  [1m[34mSELECT "slots".* FROM "slots" WHERE "slots"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/meals_controller.rb:42:in `update'
+  [1m[36mMeal Update (0.4ms)[0m  [1m[33mUPDATE "meals" SET "foodeaten" = $1, "updated_at" = $2 WHERE "meals"."id" = $3[0m  [["foodeaten", "chicken w cheese"], ["updated_at", "2020-07-21 17:20:04.365848"], ["id", 37]]
+  ↳ app/controllers/meals_controller.rb:42:in `update'
+  [1m[35m (29.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/meals_controller.rb:42:in `update'
+Completed 200 OK in 44ms (Views: 0.6ms | ActiveRecord: 30.7ms | Allocations: 6035)
+
+
+Started GET "/auth/verify" for ::1 at 2020-07-21 13:25:01 -0400
+Processing by AuthenticationController#verify as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+Completed 200 OK in 389ms (Views: 0.4ms | ActiveRecord: 4.5ms | Allocations: 5256)
+
+
+Started GET "/users/4/slots/2/meals" for ::1 at 2020-07-21 13:25:03 -0400
+Processing by MealsController#index as HTML
+  Parameters: {"user_id"=>"4", "slot_id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/meals_controller.rb:4:in `index'
+  [1m[36mMeal Load (0.3ms)[0m  [1m[34mSELECT "meals".* FROM "meals" WHERE "meals"."user_id" = $1[0m  [["user_id", 4]]
+  ↳ app/controllers/meals_controller.rb:6:in `index'
+Completed 200 OK in 123ms (Views: 9.8ms | ActiveRecord: 3.7ms | Allocations: 5553)
+
+
+Started GET "/users/1/slots" for ::1 at 2020-07-21 13:25:04 -0400
+Processing by SlotsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+Started POST "/auth/login" for ::1 at 2020-07-21 13:25:04 -0400
+  [1m[36mSlot Load (0.6ms)[0m  [1m[34mSELECT "slots".* FROM "slots"[0m
+  ↳ app/controllers/slots_controller.rb:4:in `index'
+  [1m[36mMeal Load (0.3ms)[0m  [1m[34mSELECT "meals".* FROM "meals" WHERE "meals"."slot_id" = $1[0m  [["slot_id", 9]]
+  ↳ app/controllers/slots_controller.rb:4:in `index'
+  [1m[36mMeal Load (0.2ms)[0m  [1m[34mSELECT "meals".* FROM "meals" WHERE "meals"."slot_id" = $1[0m  [["slot_id", 10]]
+  ↳ app/controllers/slots_controller.rb:4:in `index'
+  [1m[36mMeal Load (0.2ms)[0m  [1m[34mSELECT "meals".* FROM "meals" WHERE "meals"."slot_id" = $1[0m  [["slot_id", 11]]
+  ↳ app/controllers/slots_controller.rb:4:in `index'
+  [1m[36mMeal Load (0.2ms)[0m  [1m[34mSELECT "meals".* FROM "meals" WHERE "meals"."slot_id" = $1[0m  [["slot_id", 12]]
+  ↳ app/controllers/slots_controller.rb:4:in `index'
+Completed 200 OK in 146ms (Views: 15.7ms | ActiveRecord: 5.0ms | Allocations: 9688)
+
+
+Processing by AuthenticationController#login as HTML
+  Parameters: {"authentication"=>{"username"=>"polarbearpete7", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "polarbearpete7"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:5:in `login'
+Completed 200 OK in 323ms (Views: 0.5ms | ActiveRecord: 0.7ms | Allocations: 1246)
+
+
