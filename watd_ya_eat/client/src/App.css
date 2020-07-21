@@ -1,38 +1,109 @@
 .App {
+  align-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+* {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+footer {
+  background-color: #3465E0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+form {
+  background-color: #3465E0;
+  display: inline-block;
+  margin-left: 25%;
+  margin-right: 25%;
+  width:50%
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+
+.flex-container{
+  display:flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: #3465E0;
+}
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: border-box;
+  cursor: pointer;
+}
+
+input [type=submit]:hover{
+  background-color: #3465E0;
+}
+
+#content-wrap {
+  padding-bottom: 2.0rem;
+  padding-top: 2.5rem;
+}
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 1.5rem;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.logo {
+  background-color: white;
+  color: black;
+  text-align: center;
+  width: 20%;
+  height: 50%;
+  margin: 0px auto;
+  border-radius: 80%;
+}
+#logo-area{
+  background-color: #3465E0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#login{
+  display: block;
+  text-align: center
+}
+
+body {
+  text-align: center;
+}
+
+.header {
+  padding: 40px;
+  text-align: center;
+  background: #3465E0;
+  color: white;
+  font-size: 30px;
+
+}
+
+.space {
+  padding: 40px
+}
+
+.label{
+  color: white
+}
+
+.create {
+  padding: 40px;
 }

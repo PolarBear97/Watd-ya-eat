@@ -1,4 +1,5 @@
 class MealsController < ApplicationController
+  before_action :authorize_request, except: [:show,:index]
   def index
     @user = User.find(params[:user_id])
     @meals = Meal.where(user_id: @user.id)
@@ -12,8 +13,8 @@ class MealsController < ApplicationController
   
   def create
     @meal = Meal.new(meal_params)
-    @user = User.find(params[:user_id])
-    @meal.user_id = @user.id
+    
+    @meal.user = @current_user
     @slot = Slot.find(params[:slot_id])
     @meal.slot_id = @slot.id
     if @meal.save
