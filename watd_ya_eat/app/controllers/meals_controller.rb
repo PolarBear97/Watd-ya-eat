@@ -30,11 +30,26 @@ class MealsController < ApplicationController
     render json: @meals
   end
   
+  def add_meal 
+    @slot = Slot.find(params[:slot_id])
+    @meals = Meal.where(slot_id: @slot.id)
+    @user.foods << @food
+    render json: @meals
+  end
+
   def update
     @meal = Meal.find(params[:id])
     @meal.update(meal_params)
     render json: @meal
   end
+
+  # def update
+  #   if @meal.update(meal_params)
+  #     render json: @meal
+  #   else
+  #     render json: @meal.errors, status: :unprocessable_entity
+  #   end
+  # end
   
   def destroy
     @meal = Meal.find(params[:id])

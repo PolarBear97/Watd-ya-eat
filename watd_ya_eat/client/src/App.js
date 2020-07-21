@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { getUsers, getMeals, getSlots, removeMeal } from './services/apihelper'
+import { getUsers, getMeals, getSlots, removeMeal, updateMeal } from './services/apihelper'
 import './App.css';
 import Header from './components/Header.jsx'
 import { loginUser, verifyUser, registerUser, removeToken } from './services/auth'
@@ -10,7 +10,7 @@ import Footer from './components/Footer'
 import Nav from './components/Nav'
 import Create from './components/Create'
 import LogoutBtn from './components/LogoutBtn'
-
+import EditMeal from './components/EditMeal'
 
 
 
@@ -75,9 +75,17 @@ class App extends Component {
     }))
   }
 
-  removeFood = async (id) => {
-    const deleted = await removeMeal(id)
+  handleMealUpdate = async (id, mealInfo) => {
+    const newMeal = await updateMeal(id, mealInfo);
+    this.setState(prevState => ({
+      meals: prevState.meals.map(meal => meal.id === parseInt(id) ? newMeal : meal)
+    }))
+    this.props.history.push('/')
   }
+
+  // removeFood = async (id) => {
+  //   const deleted = await removeMeal(id)
+  // }
 
   handleMealDelete = async (id) => {
     await removeMeal(id);
@@ -120,6 +128,11 @@ class App extends Component {
                 <h3>Date: {meal.created_at}</h3>
 
               </Link>
+              {/* <button onClick={() => this.handleMealUpdate(meal.id)}>Edit</button> */}
+              <Link to={`/meals/${meal.id}/edit`}>
+                <button>Edit</button>
+
+              </Link>
               <button onClick={() => this.handleMealDelete(meal.id)}>Remove</button>
             </div>
           ))}
@@ -132,8 +145,16 @@ class App extends Component {
                 slots={this.state.slots}
               />}</div>
         </Route>
-
-
+        <Route path='/meals/:id/edit' render={(props) => {
+          const { id } = props.match.params;
+          const mealItem = this.state.meals.find(meal => meal.id === parseInt(id));
+          return <EditMeal
+            {...props}
+            handleMealUpdate={this.handleMealUpdate}
+            mealItem={mealItem}
+            id={id}
+          />
+        }} />
 
         <div id="footer">
           {/* <Footer /> */}

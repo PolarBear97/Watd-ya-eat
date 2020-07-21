@@ -21,7 +21,7 @@ export const getSlots = async () => {
 }
 
 export const updateMeal = async (id, mealInfo) => {
-  const response = await api.put(`/users/2/slots/2/meals/${id}`, { meal: mealInfo })
+  const response = await api.put(`/users/5/slots/12/meals/${id}`, { meal: mealInfo })
   return response.data
 }
 
