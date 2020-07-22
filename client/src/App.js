@@ -97,7 +97,6 @@ class App extends Component {
           handleLogin={this.loginSubmit}
           currentUser={this.state.currentUser}
         />
-        <div class="header">Here's what you've eaten so far</div>
         <div className="flex-container">
           <Route path='/register'>
             <Register
@@ -109,6 +108,7 @@ class App extends Component {
         </div>
         <Route exact path='/'>
           <div id="space">
+          <div class="header">Here's what you've eaten so far</div>
             {this.state.meals && this.state.meals.map(meal => (
               <div class='flex-container'>
                 <Link to={`/meals/${meal.id}`}>
