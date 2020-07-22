@@ -24,7 +24,7 @@ form {
 .flex-container{
   display:flex;
   justify-content: center;
-  background-color: #3465E0;
+  background-color: white;
 }
 
 input[type=text], select {
