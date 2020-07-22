@@ -9,7 +9,7 @@ export default class Footer extends Component {
     return (
       <>
         <footer>
-          copyright@peterskdesign.com
+          <a href="http://www.peterskdesign.com">copyright@peterskdesign.com</a>
         </footer>
       </>
     )
