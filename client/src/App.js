@@ -110,7 +110,7 @@ class App extends Component {
         <Route exact path='/'>
           <div id="space">
             {this.state.meals && this.state.meals.map(meal => (
-              <div class='meal'>
+              <div class='flex-container'>
                 <Link to={`/meals/${meal.id}`}>
                   <h2>{meal.foodeaten}</h2>
                   <h3>Date: {meal.created_at}</h3>
