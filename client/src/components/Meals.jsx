@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { getMeals, addMeal } from '../services/apihelper'
-import {withRouter} from 'react-router-dom'
 
 export default class Meals extends Component {
   state = {
@@ -43,7 +42,6 @@ export default class Meals extends Component {
   render() {
     return (
       <>
-
       </>
     )
   }

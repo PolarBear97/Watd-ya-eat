@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
-import { getSlots } from '../services/apihelper'
-import { getMeals, addMeal } from '../services/apihelper'
-import { withRouter } from 'react-router-dom'
+import { addMeal } from '../services/apihelper'
 
 export default class Create extends Component {
   state = {

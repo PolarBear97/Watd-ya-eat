@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { getUsers, getMeals, getSlots, removeMeal, updateMeal } from './services/apihelper'
+import { getMeals, getSlots, removeMeal, updateMeal } from './services/apihelper'
 import './App.css';
 import Header from './components/Header.jsx'
 import { loginUser, verifyUser, registerUser, removeToken } from './services/auth'
@@ -12,6 +12,7 @@ import Create from './components/Create'
 import LogoutBtn from './components/LogoutBtn'
 import EditMeal from './components/EditMeal'
 import SocialMedia from './components/SocialMedia'
+import Hydra from './components/Hydra'
 
 class App extends Component {
   state = {
@@ -23,7 +24,6 @@ class App extends Component {
     },
     currentUser: null
   }
-
   componentDidMount = async () => {
     const currentUser = await verifyUser()
     const meals = await getMeals(currentUser.id)
@@ -34,9 +34,6 @@ class App extends Component {
       slots
     })
   }
-  // componentDidUpdate = () => {
-
-  // }
   handleChange = (e) => {
     const { name, value } = e.target;
     this.setState(prevState => ({
@@ -46,7 +43,6 @@ class App extends Component {
       }
     }))
   }
-
   handleLogout = () => {
     this.setState({
       currentUser: null
@@ -61,9 +57,7 @@ class App extends Component {
     this.setState({
       currentUser
     })
-
   }
-
   handleRegister = async (e) => {
     e.preventDefault()
     const currentUser = await registerUser(this.state.userData)
@@ -72,13 +66,11 @@ class App extends Component {
     })
     this.props.history.push('/')
   }
-
   addNewFood = (newMeal) => {
     this.setState(prevState => ({
       meals: [...prevState.meals, newMeal]
     }))
   }
-
   handleMealUpdate = async (id, mealInfo) => {
     const newMeal = await updateMeal(id, mealInfo);
     this.setState(prevState => ({
@@ -86,14 +78,12 @@ class App extends Component {
     }))
     this.props.history.push('/')
   }
-
   handleMealDelete = async (id) => {
     await removeMeal(id);
     this.setState(prevState => ({
       meals: prevState.meals.filter(meal => meal.id !== id)
     }))
   }
-
   render() {
     return (
       <>
@@ -106,11 +96,9 @@ class App extends Component {
           userData={this.state.userData}
           handleLogin={this.loginSubmit}
           currentUser={this.state.currentUser}
-
         />
         <div class="header">Here's what you've eaten so far</div>
         <div className="flex-container">
-
           <Route path='/register'>
             <Register
               handleChange={this.handleChange}
@@ -126,19 +114,15 @@ class App extends Component {
                 <Link to={`/meals/${meal.id}`}>
                   <h2>{meal.foodeaten}</h2>
                   <h3>Date: {meal.created_at}</h3>
-
                 </Link>
-                {/* <button onClick={() => this.handleMealUpdate(meal.id)}>Edit</button> */}
                 <Link to={`/meals/${meal.id}/edit`}>
                   <button>Edit</button>
-
                 </Link>
                 <button onClick={() => this.handleMealDelete(meal.id)}>Remove</button>
               </div>
             ))}
           </div>
           <div id="space"></div>
-
           <div id="create">
             {
               this.state.slots && <Create
@@ -156,14 +140,15 @@ class App extends Component {
             id={id}
           />
         }} />
-
         <div id="space">
           <SocialMedia />
         </div>
         <div id="space">
+          <Hydra />
+        </div>
+        <div id="space">
           <Footer />
         </div>
-
       </>
     )
   }
