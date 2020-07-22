@@ -28,7 +28,7 @@ export default class Create extends Component {
         <form onSubmit={this.handleAdd}>
           <div className="createmenu">
             <label class="label" htmlFor='foodeaten'>What did you eat?</label>
-            <input name="foodeaten" type="text" class="button" value={this.state.foodeaten} onChange={this.handleChange} />
+            <input name="foodeaten" type="text" value={this.state.foodeaten} onChange={this.handleChange} />
           </div>
           <div className="createmenu">
             <select name="slot" value={this.state.value} onChange={this.handleChange}>
