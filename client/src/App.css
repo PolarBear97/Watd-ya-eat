@@ -137,13 +137,6 @@ body {
     margin: 0px auto;
     border-radius: 80%;
   }
-  form {
-    background-color: #3465E0;
-    display: inline-block;
-    margin-left: 25%;
-    margin-right: 25%;
-    width:30%
-  }
 }
 
 @media screen and (max-width: 1200px){
@@ -162,12 +155,5 @@ body {
     height: 40%;
     margin: 0px auto;
     border-radius: 80%;
-  }
-  form {
-    background-color: #3465E0;
-    display: inline-block;
-    margin-left: 25%;
-    margin-right: 25%;
-    width:40%
   }
 }
