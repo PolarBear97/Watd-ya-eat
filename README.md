@@ -24,7 +24,7 @@ _**Wat'd Ya Eat?** is an online food journal. In this day and age where just abo
 <br>
 
 ## MVP
-_The **Wat'd Ya Eat?** MVP is a full stack CRUD application. The user can create an account and log in each day to record your daily meals, edit or delete incorrect logs. The user can look back on previous weeks to see how their diets have changed over time. 
+_The **Wat'd Ya Eat?** MVP is a full stack CRUD application. The user can create an account and log in each day to view and record daily meals, edit or delete incorrect logs. The user can look back on previous weeks to see how their diets have changed over time. 
 
 <br>
 
@@ -61,14 +61,12 @@ I expect the most trouble with the login authentication system and the create an
 #### Wireframes
 
 
-[Desktop](https://app.lucidchart.com/documents/edit/3b8076ef-8af0-49fc-a4a2-4a0cfd8d90ec/0_0?shared=true)
+[Desktop](https://app.lucidchart.com/documents/edit/3b8076ef-8af0-49fc-a4a2-4a0cfd8d90ec)
 
-[Tablet](https://app.lucidchart.com/invitations/accept/28a0fa1b-d2ab-49c7-92ad-ff0ea39688f4/0_0?shared=true)
+[Tablet](https://app.lucidchart.com/invitations/accept/28a0fa1b-d2ab-49c7-92ad-ff0ea39688f4)
 
-[Mobile](https://app.lucidchart.com/invitations/accept/830b65b0-5009-46aa-964a-c1d04f276f01/0_0?shared=true)
+[Mobile](https://app.lucidchart.com/invitations/accept/830b65b0-5009-46aa-964a-c1d04f276f01)
 
-
-#### Component Tree
 
 #### Component Hierarchy
 
