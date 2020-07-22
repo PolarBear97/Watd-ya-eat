@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import '../App.css'
 
 export default class EditMeal extends Component {
   state = {
@@ -42,7 +43,7 @@ export default class EditMeal extends Component {
             onChange={this.handleChange}
           />
         </label>
-        <button>Submit</button>
+        <button class="button">Submit</button>
       </form>
     )
   }

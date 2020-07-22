@@ -1,4 +1,5 @@
 import React from 'react'
+import '../App.css'
 
 export default function Register(props) {
   return (
@@ -8,11 +9,11 @@ export default function Register(props) {
         <form>
           <div className="pair">
             <label htmlFor='username'>Username</label>
-            <input name="username" type="text" value={props.userData.username} onChange={props.handleChange} />
+            <input name="username" type="text" class="button" value={props.userData.username} onChange={props.handleChange} />
           </div>
           <div className="pair">
             <label htmlFor='password'>Password</label>
-            <input name="password" type='password' value={props.userData.password} onChange={props.handleChange} />
+            <input name="password" type='password' class="button" value={props.userData.password} onChange={props.handleChange} />
           </div>
           <input type='submit' value='Register' />
         </form>

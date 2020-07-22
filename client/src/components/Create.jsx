@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { addMeal } from '../services/apihelper'
+import '../App.css'
 
 export default class Create extends Component {
   state = {
@@ -27,7 +28,7 @@ export default class Create extends Component {
         <form onSubmit={this.handleAdd}>
           <div className="createmenu">
             <label class="label" htmlFor='foodeaten'>What did you eat?</label>
-            <input name="foodeaten" type="text" value={this.state.foodeaten} onChange={this.handleChange} />
+            <input name="foodeaten" type="text" class="button" value={this.state.foodeaten} onChange={this.handleChange} />
           </div>
           <div className="createmenu">
             <select name="slot" value={this.state.value} onChange={this.handleChange}>
@@ -36,7 +37,7 @@ export default class Create extends Component {
               ))}
             </select>
           </div>
-          <input type='submit' value='Add food' />
+          <input type='submit' value='Add food' class="button" />
         </form>
       </div>
     )
