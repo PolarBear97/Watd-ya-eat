@@ -93,7 +93,6 @@ body {
   background: #3465E0;
   color: white;
   font-size: 30px;
-
 }
 
 .space {
@@ -108,3 +107,53 @@ body {
   padding: 40px;
 }
 
+@media screen and (max-width: 600px){
+  .header {
+    padding: 40px;
+    text-align: center;
+    background: #3465E0;
+    color: white;
+    font-size: 10px;
+  }
+  .logo {
+    background-color: white;
+    color: black;
+    text-align: center;
+    width: 10%;
+    height: 20%;
+    margin: 0px auto;
+    border-radius: 80%;
+  }
+}
+
+.button {
+  background-color: #3465E0;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1200px){
+  .header {
+    padding: 40px;
+    text-align: center;
+    background: #3465E0;
+    color: white;
+    font-size: 20px;
+  }
+  .logo {
+    background-color: white;
+    color: black;
+    text-align: center;
+    width: 15%;
+    height: 40%;
+    margin: 0px auto;
+    border-radius: 80%;
+  }
+}

@@ -116,9 +116,9 @@ class App extends Component {
                   <h3>Date: {meal.created_at}</h3>
                 </Link>
                 <Link to={`/meals/${meal.id}/edit`}>
-                  <button>Edit</button>
+                  <button class="button">Edit</button>
                 </Link>
-                <button onClick={() => this.handleMealDelete(meal.id)}>Remove</button>
+                <button class="button" onClick={() => this.handleMealDelete(meal.id)}>Remove</button>
               </div>
             ))}
           </div>
